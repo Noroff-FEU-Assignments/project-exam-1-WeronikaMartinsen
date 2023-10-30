@@ -1,0 +1,24 @@
+:root {
+  --pink: #f2637e;
+  --light-pink: #f2889b;
+  --lighter-pink: #f2acb9;
+  --gray: #524a4c;
+  --lighter-gray: #f2f2f2;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.button-main {
+  padding: 1em 4em;
+  border-radius: 10px;
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  margin-left: auto;
+}
+.button-main:hover,
+.button-main:active {
+  background-color: var(--lighter-pink);
+}

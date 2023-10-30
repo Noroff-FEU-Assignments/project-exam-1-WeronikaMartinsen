@@ -1,0 +1,18 @@
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4em;
+}
+.navList {
+  display: flex;
+  gap: 4em;
+}
+a {
+  color: gray;
+}
+
+.logoImg {
+  width: 20em;
+  margin-left: auto;
+}

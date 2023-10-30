@@ -2,17 +2,32 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 4em;
+  margin: 3em 0.5em;
+  border-bottom: 1px solid var(--lighter-gray);
+  position: relative;
 }
+.hideNavList {
+  display: none;
+}
+
 .navList {
   display: flex;
   gap: 4em;
 }
+
 a {
-  color: gray;
+  color: rgb(83, 83, 83);
 }
 
 .logoImg {
-  width: 20em;
+  width: 18em;
   margin-left: auto;
+}
+.navToggle {
+  display: none;
+  cursor: pointer;
+}
+.menu {
+  font-size: 3em;
+  color: var(--gray);
 }

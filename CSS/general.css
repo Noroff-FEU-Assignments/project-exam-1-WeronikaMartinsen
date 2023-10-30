@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 :root {
   --pink: #f2637e;
   --light-pink: #f2889b;
@@ -7,7 +13,7 @@
 }
 a {
   text-decoration: none;
-  list-style: none;
+  cursor: pointer;
 }
 
 .button-main {
@@ -17,6 +23,7 @@ a {
   color: white;
   border: none;
   margin-left: auto;
+  cursor: pointer;
 }
 .button-main:hover,
 .button-main:active {

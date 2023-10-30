@@ -1,0 +1,37 @@
+@media (max-width: 785px) {
+  .logoImg {
+    width: 14em;
+  }
+  .sizeBtn {
+    padding: 1em 2em;
+  }
+  .navList {
+    gap: 2em;
+  }
+}
+
+@media (max-width: 553px) {
+  .navList {
+    display: none;
+  }
+  .showNavList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    position: absolute;
+    background-color: var(--lighter-gray);
+    top: 100%;
+    width: 100%;
+  }
+  .navToggle {
+    display: block;
+  }
+  .logoDiv {
+    margin-left: auto;
+  }
+  .sizeBtn {
+    display: none;
+  }
+}

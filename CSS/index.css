@@ -5,17 +5,15 @@
   align-items: center;
   background-color: var(--lighter-gray);
   height: 30em;
-  width: 100%;
+
   padding: 2em;
   border-bottom: var(--lighter-gray);
+  text-align: center;
 }
 .search-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 1em;
   width: 100%;
 }
 .searchInput {
-  width: 40em;
+  width: 70%;
 }

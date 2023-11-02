@@ -13,7 +13,7 @@ async function getPosts() {
   try {
     const response = await fetch(url);
     const getResults = await response.json();
-    createHTML(getResults);
+    console.log(getResults);
   } catch (error) {
     console.log(error);
   }
@@ -21,12 +21,10 @@ async function getPosts() {
 
 getPosts();
 
-function createHTML(posts) {
-  console.log(posts);
-  posts.forEach(function (post) {
-    const postContainer = document.createElement("div");
+carouselContainer.innerHTML = `<div class="postCart">
 
-    console.log(post);
-  });
-}
-carouselContainer.appendChild(postContainer);
+
+
+
+
+</div>`;

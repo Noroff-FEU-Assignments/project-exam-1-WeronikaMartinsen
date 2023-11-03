@@ -5,8 +5,7 @@
   align-items: center;
   background-color: var(--lighter-gray);
   height: 30em;
-
-  padding: 2em;
+  padding: 3em;
   border-bottom: var(--lighter-gray);
   text-align: center;
 }
@@ -16,4 +15,28 @@
 }
 .searchInput {
   width: 70%;
+}
+.carousel {
+  margin: 2em;
+  display: flex;
+  gap: 2em;
+}
+.postCard {
+  display: flex;
+  flex-direction: column;
+}
+.imgDiv {
+  width: 100%;
+}
+.postImg {
+  width: 10em;
+}
+.heroText {
+  max-width: 60em;
+  margin-bottom: 2em;
+}
+.bold {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
 }

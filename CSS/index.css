@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--lighter-gray);
-  height: 30em;
   padding: 3em;
   border-bottom: var(--lighter-gray);
   text-align: center;
@@ -18,12 +17,23 @@
 }
 .carousel {
   margin: 2em;
+  gap: 1em;
   display: flex;
-  gap: 2em;
+  overflow: hidden;
+  width: 600px;
+  transition: transform 0.3s ease-in-out;
 }
 .postCard {
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 25%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.postCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 .imgDiv {
   width: 100%;
@@ -39,4 +49,26 @@
   font-weight: 600;
   font-size: 1.5em;
   margin-bottom: 0.3em;
+}
+
+.slide-arrow {
+  cursor: pointer;
+
+  color: var(--gray);
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#arrow {
+  font-size: 2em;
 }

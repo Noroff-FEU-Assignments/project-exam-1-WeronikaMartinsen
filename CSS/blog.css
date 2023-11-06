@@ -8,7 +8,7 @@
 }
 .post {
   width: 40em;
-  border: 1px solid var(--lighter-gray);
+  border: 1px solid var(--gray);
   padding: 3em;
   border-radius: 5px;
 }
@@ -18,4 +18,14 @@
 .postImage {
   width: 100%;
   border-radius: 5px;
+}
+.excerpt {
+  display: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+.readMore {
+  border: none;
+  background-color: none;
+  margin-top: 1em;
 }

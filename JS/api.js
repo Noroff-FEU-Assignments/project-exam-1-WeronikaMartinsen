@@ -6,7 +6,7 @@ function showError(message) {
   } else {
   }
 }
-const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/";
+const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=20";
 const singlePost = "https://www.rainy-days.no/wp-json/wp/v2/pages/";
 
 export async function getPosts() {

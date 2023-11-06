@@ -1,6 +1,6 @@
 import { getPosts, displayPosts } from "./api.js";
 
-async function fetchAndDisplayPosts() {
+export async function fetchAndDisplayPosts() {
   try {
     const posts = await getPosts();
     const postContainer = document.querySelector(".posts");
@@ -11,7 +11,7 @@ async function fetchAndDisplayPosts() {
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
-      <h2>${post.title.rendered}</h2>
+      <h2 class="titleDecoration">${post.title.rendered}</h2>
       <span>${post.date}</span>
       <div class="postImg"><a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
       <span>${post.excerpt.rendered}</span>

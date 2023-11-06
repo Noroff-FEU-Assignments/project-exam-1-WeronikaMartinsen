@@ -6,8 +6,7 @@ function showError(message) {
   } else {
   }
 }
-const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=20";
-const singlePost = "https://www.rainy-days.no/wp-json/wp/v2/pages/";
+const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";
 
 export async function getPosts() {
   const response = await fetch(url);
@@ -19,11 +18,6 @@ export async function getPosts() {
     throw new Error("Failed to fetch!");
   }
 }
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-const title = params.get("title");
-const singlePostId = url + id;
 
 export async function getPost() {
   const response = await fetch(singlePostId);

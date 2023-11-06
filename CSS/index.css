@@ -72,3 +72,9 @@
 #arrow {
   font-size: 2em;
 }
+.styleH2 {
+  letter-spacing: 0.1em;
+  color: var(--gray);
+  margin-bottom: 0;
+  margin-top: 1em;
+}

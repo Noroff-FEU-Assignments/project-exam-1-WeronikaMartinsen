@@ -14,6 +14,7 @@
 }
 .postImg {
   width: 30em;
+  margin: 1em;
 }
 .postImage {
   width: 100%;
@@ -28,4 +29,5 @@
   border: none;
   background-color: none;
   margin-top: 1em;
+  font-style: italic;
 }

@@ -9,7 +9,7 @@ function showError(message) {
 const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/";
 const singlePost = "https://www.rainy-days.no/wp-json/wp/v2/pages/";
 
-async function getPosts() {
+export async function getPosts() {
   const response = await fetch(url);
   const result = await response.json();
 
@@ -25,13 +25,13 @@ const id = params.get("id");
 const title = params.get("title");
 const singlePostId = url + id;
 
-async function fetchPost() {
+export async function getPost() {
   const response = await fetch(singlePostId);
   const result = await response.json();
   return result;
 }
 
-async function displayPosts() {
+export async function displayPosts() {
   try {
     const posts = await getPosts();
     const carouselContainer = document.querySelector(".carousel");

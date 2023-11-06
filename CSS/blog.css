@@ -1,0 +1,21 @@
+.posts,
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+.post {
+  width: 40em;
+  border: 1px solid var(--lighter-gray);
+  padding: 3em;
+  border-radius: 5px;
+}
+.postImg {
+  width: 30em;
+}
+.postImage {
+  width: 100%;
+  border-radius: 5px;
+}

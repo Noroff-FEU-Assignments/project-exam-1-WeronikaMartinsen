@@ -36,6 +36,8 @@ async function displayPosts() {
     const posts = await getPosts();
     const carouselContainer = document.querySelector(".carousel");
 
+    carouselContainer.innerHTML = "";
+
     posts.forEach((post) => {
       console.log(posts);
       console.log(post);

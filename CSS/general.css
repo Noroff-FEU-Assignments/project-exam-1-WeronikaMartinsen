@@ -40,7 +40,7 @@ a {
 }
 .button-main:hover,
 .button-main:active {
-  background-color: var(--lighter-pink);
+  background-color: #c85369;
 }
 
 .sizeBig {

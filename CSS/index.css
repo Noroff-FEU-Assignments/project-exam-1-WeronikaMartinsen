@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--lighter-gray);
-  padding: 3em;
+  padding: 1em;
   border-bottom: var(--lighter-gray);
   text-align: center;
 }
@@ -20,7 +20,7 @@
   gap: 1em;
   display: flex;
   overflow: hidden;
-  width: 800px;
+  width: 80%;
   transition: transform 0.3s ease-in-out;
 }
 .postCard {
@@ -30,6 +30,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
+  min-width: 10em;
+  max-width: 10em;
 }
 .postCard:hover {
   transform: scale(1.05);
@@ -53,7 +55,6 @@
 
 .slide-arrow {
   cursor: pointer;
-
   color: var(--gray);
   width: 2em;
   height: 2em;
@@ -65,6 +66,7 @@
   align-items: center;
 }
 .slider-wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

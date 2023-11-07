@@ -48,7 +48,7 @@ export async function displayPosts() {
     const carousel = document.querySelector(".carousel");
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    const numVisiblePosts = 4;
+    const numVisiblePosts = posts.length;
     let currentSlide = 0;
 
     let touchStartX = 0;
@@ -73,19 +73,22 @@ export async function displayPosts() {
       const swipeDistance = touchEndX - touchStartX;
 
       if (swipeDistance > minSwipeDistance) {
-        moveCarousel(1);
+        moveCarousel(-1); // Swipe right
       } else if (swipeDistance < -minSwipeDistance) {
-        moveCarousel(-1);
+        moveCarousel(1); // Swipe left
       }
     }
 
-    function moveCarousel(direction) {}
-    prevButton.addEventListener("click", () => {
-      if (currentSlide > 0) {
-        currentSlide--;
-        updateCarouselView();
+    function moveCarousel(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) {
+        currentSlide = 0;
+      } else if (currentSlide >= Math.ceil(posts.length / numVisiblePosts)) {
+        currentSlide = Math.ceil(posts.length / numVisiblePosts) - 1;
       }
-    });
+
+      updateCarouselView();
+    }
 
     nextButton.addEventListener("click", () => {
       if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {

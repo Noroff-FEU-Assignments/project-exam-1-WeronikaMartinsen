@@ -16,11 +16,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   margin: 1em;
 }
 .postImage {
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 5px;
 }
 .excerpt {
@@ -33,6 +33,7 @@
   background-color: none;
   margin-top: 1em;
   font-style: italic;
+  text-decoration: none;
 }
 .titleDecoration {
   border-bottom: 3px solid var(--lighter-gray);

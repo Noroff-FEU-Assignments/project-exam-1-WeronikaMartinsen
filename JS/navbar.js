@@ -3,7 +3,7 @@ const navbar = document.querySelector(".navbar");
 navbar.innerHTML = `<div class="navContainer">
 <div class="navToggle"><ion-icon name="menu-outline" class="menu"></ion-icon></div>
 <a href="/index.html" class="logoDiv"><img class="logoImg"src="/images/logo.png" alt="Logo"/></a>
-<div class="navList showNavList">
+<div class="navList hideNavList">
 <a href="/html/blog.html">Posts</a>
 <a href="/html/about.html">About</a>
 <a href="/html/contact.html">Contact</a></div>

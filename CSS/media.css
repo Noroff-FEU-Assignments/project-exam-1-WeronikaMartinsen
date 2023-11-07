@@ -8,6 +8,9 @@
   .navList {
     gap: 2em;
   }
+  .postImg {
+    width: 100%;
+  }
 }
 
 @media (max-width: 553px) {
@@ -19,11 +22,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 4em;
+    font-size: 1.2em;
     position: absolute;
-    background-color: var(--lighter-gray);
+    background-color: var(--pink);
     top: 100%;
     width: 100%;
+  }
+  a {
+    color: white;
   }
   .navToggle {
     display: block;

@@ -51,6 +51,35 @@ export async function displayPosts() {
     const numVisiblePosts = 4;
     let currentSlide = 0;
 
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+
+    carousel.addEventListener("touchmove", (e) => {
+      e.preventDefault();
+    });
+
+    function handleSwipe() {
+      const minSwipeDistance = 50;
+
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (swipeDistance > minSwipeDistance) {
+        moveCarousel(1);
+      } else if (swipeDistance < -minSwipeDistance) {
+        moveCarousel(-1);
+      }
+    }
+
+    function moveCarousel(direction) {}
     prevButton.addEventListener("click", () => {
       if (currentSlide > 0) {
         currentSlide--;

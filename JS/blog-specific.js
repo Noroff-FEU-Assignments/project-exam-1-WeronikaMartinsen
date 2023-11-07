@@ -35,16 +35,39 @@ async function fetchPosts() {
 }
 
 function createHtml(post) {
+  console.log(post);
   const postContainer = document.querySelector(".postContainer");
   postContainer.innerHTML = `
   <h1 class="titleDecoration widthH1">${post.title.rendered}</h1>
     <div class="imgDiv">
-        <img class="postImg" src="${post.jetpack_featured_media_url}">
+        <img class="postImg" src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}">
     </div>
+    <div class="modal">
+    <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+    <div class="modalContent"><img src="" class="modalImg"/>
+    <span class="modalTxt"></span></div></div>
     <span class="widthH1">${post.excerpt.rendered}</span>
     <span>${post.date}</span>
    
   `;
+
+  const images = document.querySelectorAll(".postImg");
+  const modal = document.querySelector(".modal");
+  const modalImg = document.querySelector(".modalImg");
+  const modalTxt = document.querySelector(".modalTxt");
+  const close = document.querySelector(".close");
+
+  images.forEach((image) => {
+    image.addEventListener("click", () => {
+      modalImg.src = image.src;
+      modalTxt.innerHTML = image.alt;
+      modal.classList.add("appear");
+
+      close.addEventListener("click", () => {
+        modal.classList.remove("appear");
+      });
+    });
+  });
 }
 
 fetchPosts();

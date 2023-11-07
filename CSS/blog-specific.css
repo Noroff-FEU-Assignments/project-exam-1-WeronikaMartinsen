@@ -7,9 +7,15 @@
 .widthH1 {
   width: 70%;
 }
-/* The Modal (background) */
+.postImg {
+  cursor: pointer;
+  border-radius: 5px;
+}
+.postImg:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+}
 .modal {
-  display: none; /* Hidden by default */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -18,22 +24,49 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal.appear {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal.appear .modalImg {
+  animation: zoom 0.3s linear;
+}
+.modalImg {
+  width: 80%;
+  max-width: 700px;
+  animation: zoom 0.3s linear;
+}
+.modalTxt {
+  margin-top: 1em;
+  animation: zoom 0.3s linear;
 }
 
-/* Modal Content */
-.modal-content {
-  display: block;
-  margin: 0 auto;
-  max-width: 90%;
-  max-height: 90%;
+.modalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 }
 
-/* Close button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 30px;
+  top: 1em;
+  right: 1.5em;
+  font-size: 2.5em;
   cursor: pointer;
   color: white;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }

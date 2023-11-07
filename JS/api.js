@@ -39,7 +39,7 @@ export async function displayPosts() {
       postCard.className = "postCard";
       postCard.innerHTML = `      
       <span>${post.date}</span>
-      <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImg" src="${post.jetpack_featured_media_url}"></a></div>
+      <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImg" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
         <h5>${post.title.rendered}</h5>
                     
       `;
@@ -48,7 +48,7 @@ export async function displayPosts() {
     const carousel = document.querySelector(".carousel");
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    const numVisiblePosts = posts.length;
+    const numVisiblePosts = 4;
     let currentSlide = 0;
 
     let touchStartX = 0;
@@ -73,11 +73,27 @@ export async function displayPosts() {
       const swipeDistance = touchEndX - touchStartX;
 
       if (swipeDistance > minSwipeDistance) {
-        moveCarousel(-1); // Swipe right
+        moveCarousel(-1);
       } else if (swipeDistance < -minSwipeDistance) {
-        moveCarousel(1); // Swipe left
+        moveCarousel(1);
       }
     }
+
+    nextButton.addEventListener("click", () => {
+      console.log("Button clicked");
+      if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {
+        moveCarousel(1); // Move to the next slide
+      }
+      updateCarouselView(); // Update the view
+    });
+
+    prevButton.addEventListener("click", () => {
+      console.log("Button clicked");
+      if (currentSlide > 0) {
+        moveCarousel(-1); // Move to the previous slide
+      }
+      updateCarouselView(); // Update the view
+    });
 
     function moveCarousel(direction) {
       currentSlide += direction;
@@ -86,16 +102,7 @@ export async function displayPosts() {
       } else if (currentSlide >= Math.ceil(posts.length / numVisiblePosts)) {
         currentSlide = Math.ceil(posts.length / numVisiblePosts) - 1;
       }
-
-      updateCarouselView();
     }
-
-    nextButton.addEventListener("click", () => {
-      if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {
-        currentSlide++;
-        updateCarouselView();
-      }
-    });
 
     function updateCarouselView() {
       const startIndex = currentSlide * numVisiblePosts;

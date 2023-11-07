@@ -40,13 +40,13 @@ function createHtml(post) {
   postContainer.innerHTML = `
   <h1 class="titleDecoration widthH1">${post.title.rendered}</h1>
     <div class="imgDiv">
-        <img class="postImg" src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}">
+        <img class="postImg" src="${post.jetpack_featured_media_url}" alt="${post.better_featured_image.alt_text}">
     </div>
     <div class="modal">
     <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-    <div class="modalContent"><img src="" class="modalImg"/>
+    <div class="modalContent"><img src="" alt="${post.better_featured_image.alt_text}"class="modalImg"/>
     <span class="modalTxt"></span></div></div>
-    <span class="widthH1">${post.excerpt.rendered}</span>
+    <span class="widthH1">${post.content.rendered}</span>
     <span>${post.date}</span>
    
   `;

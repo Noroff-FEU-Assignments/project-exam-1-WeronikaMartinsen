@@ -13,7 +13,7 @@ export async function fetchAndDisplayPosts() {
       postBlog.innerHTML = `      
       <h2 class="titleDecoration">${post.title.rendered}</h2>
       <span>${post.date}</span>
-      <div class="postImg"><a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
+      <div class="postImg"><a class="postImg" href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
       <span>${post.excerpt.rendered}</span>
       <span class="excerpt">${post.excerpt.rendered}</span>
       <button class="readMore">Read more...</button>

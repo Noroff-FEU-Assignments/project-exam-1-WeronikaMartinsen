@@ -28,6 +28,9 @@
   border: none;
   background-color: var(--lighter-gray);
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .copyright {
   font-size: 0.7em;

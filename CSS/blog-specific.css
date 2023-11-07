@@ -3,11 +3,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 1em;
+  text-align: center;
 }
 .widthH1 {
   width: 70%;
+  margin-bottom: 1em;
+}
+.imgDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 1em;
 }
 .postImg {
+  width: 50%;
   cursor: pointer;
   border-radius: 5px;
 }

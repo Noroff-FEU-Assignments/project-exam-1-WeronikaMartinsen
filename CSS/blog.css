@@ -7,17 +7,20 @@
   margin: 1em;
 }
 .post {
-  width: 40em;
+  max-width: 800px;
   border: 1px solid var(--gray);
-  padding: 3em;
+  padding: 2em;
   border-radius: 5px;
 }
 .postImg {
-  width: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin: 1em;
 }
 .postImage {
-  width: 100%;
+  max-width: 80%;
   border-radius: 5px;
 }
 .excerpt {

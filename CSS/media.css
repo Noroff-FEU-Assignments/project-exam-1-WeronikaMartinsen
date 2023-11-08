@@ -12,6 +12,14 @@
     width: 100%;
   }
 }
+@media (max-width: 612px) {
+  .contactInfo {
+    flex-wrap: wrap;
+  }
+  .myImage {
+    width: 60%;
+  }
+}
 
 @media (max-width: 553px) {
   .navList {

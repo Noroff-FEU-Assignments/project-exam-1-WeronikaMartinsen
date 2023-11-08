@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.myImage {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.about-text {
+  max-width: 800px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.imageGallery {
+  width: 100%;
+  max-width: 30em;
+}

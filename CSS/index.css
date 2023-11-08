@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--lighter-gray);
   padding: 1em;
   border-bottom: var(--lighter-gray);
   text-align: center;
@@ -12,8 +11,20 @@
   margin: 1em;
   width: 100%;
 }
+.color {
+  background-color: var(--gray);
+  color: white;
+}
+.color:hover,
+.color:active {
+  border: 2px solid var(--gray);
+  background-color: var(--lighter-gray);
+  color: var(--gray);
+}
 .searchInput {
   width: 70%;
+  background-color: var(--lighter-gray);
+  border: 2px solid var(--gray);
 }
 .carousel {
   margin: 2em;
@@ -79,4 +90,5 @@
   color: var(--gray);
   margin-bottom: 0;
   margin-top: 1em;
+  border-bottom: 2px solid var(--lighter-gray);
 }

@@ -48,29 +48,25 @@
   flex-direction: column;
   margin: 1em;
 }
+.form-group label {
+  font-size: 0.8em;
+}
 .contactInput {
   background-color: var(--lighter-gray);
   width: 100%;
   border: none;
   border-radius: 10px;
 }
-#messageDiv {
-  display: none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
+.form-group span {
+  color: red;
+  right: 2em;
+  font-size: 0.8em;
+  margin-left: auto;
 }
-.invalid,
-.valid {
-  display: none; /* Initially hide the classes */
+.checkIcon {
+  color: seagreen;
+  font-size: 1.5em;
 }
-
-.nameInput:invalid {
-  border: 2px solid red; /* Change the border when invalid */
-}
-
-.nameInput:valid {
-  border: 2px solid green; /* Change the border when valid */
+.btn {
+  width: 100%;
 }

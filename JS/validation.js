@@ -14,98 +14,110 @@ validation.innerHTML = `
 <form class="contact-form">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input class="contactInput nameInput" type="text" id="name" name="name" pattern=".{6,}" required>
-      <div id="messageName" class="invalid valid"></div>
+      <input class="contactInput nameInput" type="text" id="name" onkeyup="validateName()" name="name" pattern=".{6,}" required>
+      <span id="name-error"></span>
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input class="contactInput emailInput" type="email" id="email" name="email" required>
-      <div id="messageEmail" class="invalid valid"></div>
+      <input class="contactInput emailInput" type="email" id="email" onkeyup="validateEmail()" name="email" required>
+      <span id="email-error"></span>
       </div>
     <div class="form-group">
       <label for="subject">Subject:</label>
-      <input class="contactInput subjectInput" id="subject" name="subject" required></input>
-      <div id="messageSubject" class="invalid valid"></div>
+      <input class="contactInput subjectInput" id="subject" onkeyup="validateSubject()" name="subject" required></input>
+      <span id="subject-error"></span>
       </div>
     <div class="form-group">
       <label for="message">Message:</label>
-      <textarea class="contactInput messageInput" id="message" name="message" rows="5" required></textarea>
-      <div id="messageMessage" class="invalid valid"></div>
-      </div>
-  </form>
-  <div>
-  <button type="submit" class="button-main">Send Message</button></div>
+      <textarea class="contactInput messageInput" id="message" onkeyup="validateMessage()" name="message" rows="5" required></textarea>
+      <span id="message-error"></span></div>
+    <div class="form-group btn">
+      <button onclick="return validateForm()" type="submit" class="button-main">Send Message</button>
+      <span id="submit-error"></span></div>
+
+  </form> 
 </div>`;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const nameInput = document.querySelector(".nameInput");
-  const emailInput = document.querySelector(".emailInput");
-  const subjectInput = document.querySelector(".subjectInput");
-  const messageInput = document.querySelector(".messageInput");
-  const messageName = document.getElementById("messageName");
-  const messageEmail = document.getElementById("messageEmail");
-  const messageSubject = document.getElementById("messageSubject");
-  const messageMessage = document.getElementById("messageMessage");
+const nameError = document.getElementById("name-error");
+const emailError = document.getElementById("email-error");
+const subjectError = document.getElementById("subject-error");
+const messageError = document.getElementById("message-error");
+const submitError = document.getElementById("submit-error");
 
-  nameInput.addEventListener("input", () => {
-    if (nameInput.validity.valueMissing || nameInput.validity.tooShort) {
-      messageName.textContent = nameInput.validity.valueMissing
-        ? "*Name is required."
-        : "Name must be more than 5 characters long.";
-      nameInput.classList.add("invalid");
-      nameInput.classList.remove("valid");
-    } else {
-      messageName.textContent = "";
-      nameInput.classList.remove("invalid");
-      nameInput.classList.add("valid");
-    }
-  });
+function validateName() {
+  const name = document.getElementById("name").value;
+  const required = 5;
+  const left = required - name.length;
 
-  emailInput.addEventListener("input", () => {
-    if (emailInput.validity.valueMissing || !emailInput.validity.valid) {
-      messageEmail.textContent = emailInput.validity.valueMissing
-        ? "*Email is required."
-        : "Email must be a valid address.";
-      emailInput.classList.add("invalid");
-      emailInput.classList.remove("valid");
-    } else {
-      messageEmail.textContent = "";
-      emailInput.classList.remove("invalid");
-      emailInput.classList.add("valid");
-    }
-  });
+  if (left > 0) {
+    nameError.innerHTML = left + "More characters required.";
+    return false;
+  }
+  if (name.length == 0) {
+    nameError.innerHTML = "Name is required.";
+    return false;
+  }
+  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+    nameError.innerHTML = "Write full name.";
+    return false;
+  }
+  nameError.innerHTML = `<ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>`;
+  return true;
+}
 
-  subjectInput.addEventListener("input", () => {
-    if (
-      subjectInput.validity.valueMissing ||
-      subjectInput.validity.tooShort.valid
-    ) {
-      messageSubject.textContent = subjectInput.validity.valueMissing
-        ? "*Subject is required."
-        : "Should be more than 15 characters long.";
-      subjectInput.classList.add("invalid");
-      subjectInput.classList.remove("valid");
-    } else {
-      messageSubject.textContent = "";
-      subjectInput.classList.remove("invalid");
-      subjectInput.classList.add("valid");
-    }
-  });
+function validateEmail() {
+  const email = document.getElementById("email").value;
 
-  messageInput.addEventListener("input", () => {
-    if (
-      messageInput.validity.valueMissing ||
-      messageInput.validity.tooShort.valid
-    ) {
-      messageMessage.textContent = messageInput.validity.valueMissing
-        ? "*Message is required."
-        : "Should be more than 25 characters long.";
-      messageInput.classList.add("invalid");
-      messageInput.classList.remove("valid");
-    } else {
-      messageMessage.textContent = "";
-      messageInput.classList.remove("invalid");
-      messageInput.classList.add("valid");
-    }
-  });
-});
+  if (email.length == 0) {
+    emailError.innerHTML = "Email is required.";
+    return false;
+  }
+  if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+    emailError.innerHTML = "Email invalid.";
+    return false;
+  }
+  emailError.innerHTML = `<ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>`;
+  return true;
+}
+
+function validateMessage() {
+  const message = document.getElementById("message").value;
+  const required = 25;
+  const left = required - message.length;
+
+  if (left > 0) {
+    messageError.innerHTML = left + "More characters required.";
+    return false;
+  }
+  messageError.innerHTML = `<ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>`;
+  return true;
+}
+
+function validateSubject() {
+  const subject = document.getElementById("subject").value;
+  const required = 15;
+  const left = required - subject.length;
+
+  if (left > 0) {
+    subjectError.innerHTML = left + "More characters required.";
+    return false;
+  }
+  subjectError.innerHTML = `<ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>`;
+  return true;
+}
+
+function validateForm() {
+  if (
+    !validateName() ||
+    !validateEmail() ||
+    !validateSubject() ||
+    !validateMessage()
+  ) {
+    submitError.style.display = "block";
+    submitError.innerHTML = "Please fix error to submit.";
+    setTimeout(function () {
+      submitError.style.display = "none";
+    }, 3000);
+    return false;
+  }
+}

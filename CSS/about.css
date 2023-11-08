@@ -17,13 +17,19 @@
   max-width: 800px;
 }
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
 }
 .imageGallery {
   width: 100%;
-  max-width: 30em;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.galleryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
 }

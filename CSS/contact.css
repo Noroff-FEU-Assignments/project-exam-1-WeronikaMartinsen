@@ -6,10 +6,9 @@
   display: flex;
   justify-content: space-around;
   align-content: center;
-  background-color: var(--lighter-gray);
+  border-bottom: 1px solid var(--gray);
   color: var(--gray);
-  border-radius: 10px;
-  padding: 2em;
+  padding: 1em;
 }
 .contactIcon {
   font-size: 2em;
@@ -35,6 +34,7 @@
   margin-bottom: 3em;
 }
 .contactSpan {
+  margin-top: 3em;
   font-style: italic;
   max-width: 600px;
   text-align: center;
@@ -52,9 +52,8 @@
   font-size: 0.8em;
 }
 .contactInput {
-  background-color: var(--lighter-gray);
   width: 100%;
-  border: none;
+  border: 1px solid var(--gray);
   border-radius: 10px;
 }
 .form-group span {
@@ -67,6 +66,11 @@
   color: seagreen;
   font-size: 1.5em;
 }
-.btn {
-  width: 100%;
+.buttonSubmit {
+  margin-top: 2em;
+  padding: 1em;
+  border: none;
+  background-color: var(--gray);
+  color: white;
+  border-radius: 10px;
 }

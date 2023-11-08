@@ -1,13 +1,6 @@
 const validation = document.querySelector(".validation");
 
 validation.innerHTML = `
-<div class="contactInfo">
-<div class="contactBox"><ion-icon class="contactIcon" name="mail-outline"></ion-icon><span class="infoText">Email: wb3167@gmail.com</span></div>
-<div class="contactBox"><ion-icon class="contactIcon" name="logo-facebook"></ion-icon><span class="infoText">Facebook</span></div>
-<div class="contactBox"><ion-icon class="contactIcon" name="call-outline"></ion-icon><span class="infoText">Mobile: 925 011 77</span></div>
-<div class="contactBox"><ion-icon class="contactIcon" name="logo-instagram"></ion-icon><span class="infoText">Instagram</span></div>
-</div>
-
 <div class="validationContainer">
 <span class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</span>
 <h1>Contact Me Directly</h1>
@@ -32,10 +25,16 @@ validation.innerHTML = `
       <textarea class="contactInput messageInput" id="message" onkeyup="validateMessage()" name="message" rows="5" required></textarea>
       <span id="message-error"></span></div>
     <div class="form-group btn">
-      <button onclick="return validateForm()" type="submit" class="button-main">Send Message</button>
+      <button onclick="return validateForm()" type="submit" class="buttonSubmit">Send Message</button>
       <span id="submit-error"></span></div>
 
   </form> 
+</div>
+<div class="contactInfo">
+<div class="contactBox"><ion-icon class="contactIcon" name="mail-outline"></ion-icon><span class="infoText">Email: wb3167@gmail.com</span></div>
+<div class="contactBox"><ion-icon class="contactIcon" name="logo-facebook"></ion-icon><span class="infoText">Facebook</span></div>
+<div class="contactBox"><ion-icon class="contactIcon" name="call-outline"></ion-icon><span class="infoText">Mobile: 925 011 77</span></div>
+<div class="contactBox"><ion-icon class="contactIcon" name="logo-instagram"></ion-icon><span class="infoText">Instagram</span></div>
 </div>`;
 
 const nameError = document.getElementById("name-error");

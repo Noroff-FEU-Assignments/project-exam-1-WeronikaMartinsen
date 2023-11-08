@@ -33,13 +33,21 @@
     padding: 4em;
     font-size: 1.2em;
     position: absolute;
-    background-color: var(--pink);
+    background: linear-gradient(
+      to bottom,
+      white,
+      white,
+      white,
+      var(--lighter-pink)
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     top: 100%;
     width: 100%;
+    z-index: 1000;
   }
-  a {
-    color: white;
-  }
+
   .navToggle {
     display: block;
   }

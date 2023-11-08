@@ -38,9 +38,9 @@ export async function displayPosts() {
       const postCard = document.createElement("div");
       postCard.className = "postCard";
       postCard.innerHTML = `      
-      <span>${post.date}</span>
+      
       <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImg" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
-        <h5>${post.title.rendered}</h5>
+        <div class="divText"><h5>${post.title.rendered}</h5><span class="spanDate">${post.date}</span></div>
                     
       `;
       carouselContainer.appendChild(postCard);

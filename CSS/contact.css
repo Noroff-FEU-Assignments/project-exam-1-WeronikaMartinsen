@@ -6,9 +6,10 @@
   display: flex;
   justify-content: space-around;
   align-content: center;
-  border: 2px solid var(--lighter-gray);
+  background-color: var(--lighter-gray);
   color: var(--gray);
   border-radius: 10px;
+  padding: 2em;
 }
 .contactIcon {
   font-size: 2em;

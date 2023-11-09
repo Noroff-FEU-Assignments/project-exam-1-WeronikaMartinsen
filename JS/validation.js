@@ -2,8 +2,9 @@ const validation = document.querySelector(".validation");
 
 validation.innerHTML = `
 <div class="validationContainer">
-<span class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</span>
 <h1>Contact Me Directly</h1>
+<h2 class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</h2>
+
 <form class="contact-form">
     <div class="form-group">
       <label for="name">Name:</label>

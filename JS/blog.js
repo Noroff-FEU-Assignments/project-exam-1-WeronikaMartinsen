@@ -1,13 +1,14 @@
 import { getPosts, displayPosts } from "./api.js";
 
 export async function fetchAndDisplayPosts() {
+  showLoadingIndicator();
   try {
     const posts = await getPosts();
     const postContainer = document.querySelector(".posts");
 
     posts.forEach((post) => {
-      console.log(posts);
-      console.log(post);
+      const heading = document.createElement("h1");
+      heading.innerHTML = "New post";
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
@@ -18,6 +19,7 @@ export async function fetchAndDisplayPosts() {
       <span class="excerpt">${post.content.rendered}</span>
       <button class="readMore">Read more...</button>
       `;
+      postContainer.appendChild(heading);
       postContainer.appendChild(postBlog);
 
       const readMore = postBlog.querySelector(".readMore");
@@ -33,9 +35,23 @@ export async function fetchAndDisplayPosts() {
         }
       });
     });
+    hideLoadingIndicator();
   } catch (error) {
     console.error("Error fetching and displaying posts:", error);
+    hideLoadingIndicator();
   }
+}
+function showLoadingIndicator() {
+  const loading = document.querySelector(".loading");
+  loading.innerHTML = `<div class="loading">
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+  </div>`;
+}
+function hideLoadingIndicator() {
+  const loading = document.querySelector(".loadingIndicator");
+  loading.style.display = "none"; // Hide the loading indicator
 }
 
 fetchAndDisplayPosts();

@@ -14,6 +14,7 @@ body {
   font-family: "Arimo", sans-serif;
   font-family: "Edu TAS Beginner", cursive;
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -65,4 +66,40 @@ input {
   border-radius: var(--border-radius);
   border-style: none;
   height: 3em;
+}
+.loading {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 1.5s infinite;
+}
+
+.dot1 {
+  animation-delay: 0s;
+}
+
+.dot2 {
+  animation-delay: 0.5s;
+}
+
+.dot3 {
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }

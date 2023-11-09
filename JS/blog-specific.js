@@ -10,6 +10,7 @@ function getPostTitleFromQuery() {
 }
 
 async function fetchPosts() {
+  showLoadingIndicator();
   const postId = getPostIdFromQuery();
   const title = getPostTitleFromQuery();
   if (!postId) {
@@ -21,6 +22,7 @@ async function fetchPosts() {
     const response = await fetch(
       `https://www.rainy-days.no/wp-json/wp/v2/posts/${postId}`
     );
+    hideLoadingIndicator();
     const singlePost = await response.json();
     if (!response.ok) {
       console.error("Failed to fetch the single post.");
@@ -68,6 +70,18 @@ function createHtml(post) {
       });
     });
   });
+}
+function showLoadingIndicator() {
+  const loading = document.querySelector(".loadingIndicator");
+  loading.innerHTML = `<div class="loading">
+  <div class="dot dot1"></div>
+  <div class="dot dot2"></div>
+  <div class="dot dot3"></div>
+</div>`;
+}
+function hideLoadingIndicator() {
+  const loading = document.querySelector(".loadingIndicator");
+  loading.style.display = "none";
 }
 
 fetchPosts();

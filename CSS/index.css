@@ -49,6 +49,7 @@ form {
   min-width: 13em;
   max-width: 13em;
   overflow: hidden;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 .postCard:hover {
   transform: scale(1.05);

@@ -6,13 +6,16 @@ function showError(message) {
   } else {
   }
 }
+
 const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";
 
 export async function getPosts() {
+  showLoadingIndicator();
   const response = await fetch(url);
   const result = await response.json();
 
   if (response.ok) {
+    hideLoadingIndicator();
     return result;
   } else {
     throw new Error("Failed to fetch!");
@@ -54,11 +57,11 @@ export async function displayPosts() {
     let touchStartX = 0;
     let touchEndX = 0;
 
-    carousel.addEventListener("touchstart", (e) => {
+    carousel.addEventListener("touchmove", (e) => {
       touchStartX = e.touches[0].clientX;
     });
 
-    carousel.addEventListener("touchend", (e) => {
+    carousel.addEventListener("touchmove", (e) => {
       touchEndX = e.changedTouches[0].clientX;
       handleSwipe();
     });
@@ -82,17 +85,17 @@ export async function displayPosts() {
     nextButton.addEventListener("click", () => {
       console.log("Button clicked");
       if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {
-        moveCarousel(1); // Move to the next slide
+        moveCarousel(1);
       }
-      updateCarouselView(); // Update the view
+      updateCarouselView();
     });
 
     prevButton.addEventListener("click", () => {
       console.log("Button clicked");
       if (currentSlide > 0) {
-        moveCarousel(-1); // Move to the previous slide
+        moveCarousel(-1);
       }
-      updateCarouselView(); // Update the view
+      updateCarouselView();
     });
 
     function moveCarousel(direction) {
@@ -123,4 +126,17 @@ export async function displayPosts() {
     showError("Failed to fetch posts");
   }
 }
+function showLoadingIndicator() {
+  const loading = document.querySelector(".loadingIndicator");
+  loading.innerHTML = `<div class="loading">
+  <div class="dot dot1"></div>
+  <div class="dot dot2"></div>
+  <div class="dot dot3"></div>
+</div>`;
+}
+function hideLoadingIndicator() {
+  const loading = document.querySelector(".loadingIndicator");
+  loading.style.display = "none"; // Hide the loading indicator
+}
+
 displayPosts();

@@ -36,7 +36,7 @@
     background: linear-gradient(
       to bottom,
       white,
-      white,
+      var(--lighter-pink),
       white,
       var(--lighter-pink)
     );
@@ -46,6 +46,7 @@
     top: 100%;
     width: 100%;
     z-index: 1000;
+    transition: width 0.5s ease-in-out;
   }
   form {
     display: block;

@@ -21,15 +21,45 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
-.imageGallery {
+.imgBox {
+  position: relative;
+  text-align: center;
+  color: var(--gray);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.imgBox img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+}
+.imgBox span {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 0.2em;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
 }
 .galleryContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1em;
+}
+.better {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.better span {
+  font-style: italic;
 }

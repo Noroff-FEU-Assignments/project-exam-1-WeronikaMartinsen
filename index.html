@@ -28,16 +28,21 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <!-- Hotjar Tracking Code for Homepage -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3729039,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3729039, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <script defer src="JS/navbar.js"></script>
     <script type="module" defer src="js/api.js"></script>
     <script defer src="js/footer.js"></script>
@@ -61,20 +66,29 @@
         >
         <div class="search-bar">
           <form>
-            <input class="searchInput" type="text" />
+            <label class="visibility" for="searchInput">Hello</label>
+            <input id="searchInput" class="searchInput" type="text" />
             <button class="button-main color">Search</button>
           </form>
         </div>
 
         <h2 class="styleH2">New posts</h2>
         <div class="slider-wrapper">
-          <button class="slide-arrow" id="slide-arrow-prev">
+          <button
+            class="slide-arrow"
+            id="slide-arrow-prev"
+            aria-label="Previous Slide"
+          >
             <ion-icon id="arrow" name="chevron-back-outline"></ion-icon>
           </button>
           <div class="carousel">
             <div class="loadingIndicator"></div>
           </div>
-          <button class="slide-arrow" id="slide-arrow-next">
+          <button
+            class="slide-arrow"
+            id="slide-arrow-next"
+            aria-label="Next Slide"
+          >
             <ion-icon id="arrow" name="chevron-forward-outline"></ion-icon>
           </button>
         </div>

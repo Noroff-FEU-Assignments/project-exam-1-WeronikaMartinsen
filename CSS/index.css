@@ -114,3 +114,6 @@ form {
   justify-content: flex-end;
   margin-top: 0.5em;
 }
+.visibility {
+  opacity: 0;
+}

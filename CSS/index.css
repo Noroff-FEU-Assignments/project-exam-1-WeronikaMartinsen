@@ -93,6 +93,7 @@ form {
   align-items: center;
 }
 #arrow {
+  color: var(--gray);
   font-size: 3em;
 }
 .styleH2 {

@@ -62,6 +62,9 @@ a {
 .sizeBig {
   font-size: 3em;
 }
+.sizeBtn {
+  color: black;
+}
 input {
   border-radius: var(--border-radius);
   border-style: none;

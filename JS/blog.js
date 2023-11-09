@@ -8,7 +8,7 @@ export async function fetchAndDisplayPosts() {
 
     posts.forEach((post) => {
       const heading = document.createElement("h1");
-      heading.innerHTML = "New post";
+      heading.innerHTML = "New posts";
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      

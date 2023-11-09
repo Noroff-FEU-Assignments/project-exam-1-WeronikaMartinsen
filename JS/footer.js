@@ -8,7 +8,7 @@ footer.innerHTML = `<div class="footerContainer">
 <ion-icon id="footerIcon" name="logo-snapchat"></ion-icon>
 <ion-icon id="footerIcon" name="wifi-outline"></ion-icon>
 </div>
-<h4>My projects:</h4>
+<h3>My projects:</h3>
 <div class="footerBox gap">
 <a class="netlifyLink" href="https://classy-rabanadas-8c360c.netlify.app/">Rainy Days</a>
 <a class="netlifyLink" href="https://symphonious-marigold-52e292.netlify.app/">Museum</a>

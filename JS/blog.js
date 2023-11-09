@@ -7,8 +7,6 @@ export async function fetchAndDisplayPosts() {
     const postContainer = document.querySelector(".posts");
 
     posts.forEach((post) => {
-      const heading = document.createElement("h1");
-      heading.innerHTML = "New posts";
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
@@ -19,7 +17,7 @@ export async function fetchAndDisplayPosts() {
       <span class="excerpt">${post.content.rendered}</span>
       <button class="readMore">Read more...</button>
       `;
-      postContainer.appendChild(heading);
+
       postContainer.appendChild(postBlog);
 
       const readMore = postBlog.querySelector(".readMore");
@@ -51,7 +49,7 @@ function showLoadingIndicator() {
 }
 function hideLoadingIndicator() {
   const loading = document.querySelector(".loadingIndicator");
-  loading.style.display = "none"; // Hide the loading indicator
+  loading.style.display = "none";
 }
 
 fetchAndDisplayPosts();

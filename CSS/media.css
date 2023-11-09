@@ -19,6 +19,9 @@
   .myImage {
     width: 60%;
   }
+  .sizeBtn {
+    display: none;
+  }
 }
 
 @media (max-width: 553px) {
@@ -58,9 +61,7 @@
   .logoDiv {
     margin-left: auto;
   }
-  .sizeBtn {
-    display: none;
-  }
+
   .footer-gap {
     gap: 2em;
   }

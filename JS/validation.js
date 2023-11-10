@@ -119,5 +119,21 @@ function validateForm() {
       submitError.style.display = "none";
     }, 3000);
     return false;
+  } else {
+    openOverlay();
+    return false;
   }
+}
+
+function openOverlay() {
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlayMessage");
+  overlay.innerHTML = `<div>`;
+  overlay.style.display = "block";
+}
+
+// Function to close the overlay message
+function closeOverlay() {
+  const overlay = document.getElementById("overlayMessage");
+  overlay.style.display = "none";
 }

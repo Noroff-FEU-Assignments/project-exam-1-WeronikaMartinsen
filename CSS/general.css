@@ -31,6 +31,10 @@ p {
   max-width: 800px;
   text-align: start;
 }
+ol,
+ul {
+  text-align: left;
+}
 h1,
 h2,
 h3,

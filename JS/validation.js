@@ -124,16 +124,22 @@ function validateForm() {
     return false;
   }
 }
-
 function openOverlay() {
   const overlay = document.createElement("div");
   overlay.classList.add("overlayMessage");
-  overlay.innerHTML = `<div>`;
-  overlay.style.display = "block";
+  overlay.innerHTML = `<ion-icon class="closeIcon" name="close-outline" onclick="closeOverlay()"></ion-icon><h3>Thank you for contacting me!</h3>
+    <span>I will answer you as fast as It will be possible.</span>
+    <a href="/html/blog.html" class="button-main spanOverlay">Go to posts</a>`;
+
+  // Append the overlay to the validation container or another container
+  const validationContainer = document.querySelector(".validationContainer");
+  validationContainer.appendChild(overlay);
 }
 
-// Function to close the overlay message
 function closeOverlay() {
-  const overlay = document.getElementById("overlayMessage");
+  const overlay = document.querySelector(".overlayMessage");
   overlay.style.display = "none";
+
+  // Remove the overlay element from the DOM
+  overlay.parentNode.removeChild(overlay);
 }

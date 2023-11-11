@@ -49,7 +49,7 @@
     top: 100%;
     width: 100%;
     z-index: 1000;
-    transition: width 0.5s ease-in-out;
+    transition: all 0.5s;
   }
   form {
     display: block;

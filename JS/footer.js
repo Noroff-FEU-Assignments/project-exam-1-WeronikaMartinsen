@@ -2,11 +2,11 @@ const footer = document.querySelector(".footer");
 
 footer.innerHTML = `<div class="footerContainer">
 <div class="footerBox footer-gap">
-<ion-icon id="footerIcon" name="logo-facebook"></ion-icon>
+
 <ion-icon id="footerIcon" name="logo-instagram"></ion-icon>
-<ion-icon id="footerIcon" name="logo-google"></ion-icon>
-<ion-icon id="footerIcon" name="logo-snapchat"></ion-icon>
-<ion-icon id="footerIcon" name="wifi-outline"></ion-icon>
+<a href="https://www.linkedin.com/in/weronika-martinsen-a655a1246/"><ion-icon id="footerIcon" name="logo-linkedin"></ion-icon></a>
+<a href="https://github.com/WeronikaMartinsen?tab=repositories"><ion-icon id="footerIcon" name="logo-github"></ion-icon></a>
+
 </div>
 <h3>My projects:</h3>
 <div class="footerBox gap">

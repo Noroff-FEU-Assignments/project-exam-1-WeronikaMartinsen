@@ -7,6 +7,7 @@ export async function fetchAndDisplayPosts() {
     const postContainer = document.querySelector(".posts");
 
     posts.forEach((post) => {
+      console.log(posts);
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      

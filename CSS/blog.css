@@ -27,6 +27,7 @@
   display: none;
   margin-top: 0;
   padding-top: 0;
+  gap: 1em;
 }
 .readMore {
   border: none;

@@ -57,17 +57,13 @@ export async function displayPosts() {
     let touchStartX = 0;
     let touchEndX = 0;
 
-    carousel.addEventListener("touchmove", (e) => {
+    carousel.addEventListener("touchstart", (e) => {
       touchStartX = e.touches[0].clientX;
     });
 
-    carousel.addEventListener("touchmove", (e) => {
+    carousel.addEventListener("touchend", (e) => {
       touchEndX = e.changedTouches[0].clientX;
       handleSwipe();
-    });
-
-    carousel.addEventListener("touchmove", (e) => {
-      e.preventDefault();
     });
 
     function handleSwipe() {

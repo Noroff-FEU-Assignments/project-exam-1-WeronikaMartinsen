@@ -14,7 +14,7 @@
 }
 @media (max-width: 612px) {
   #arrow {
-    font-size: 1em;
+    font-size: 2em;
   }
   .contactInfo {
     flex-wrap: wrap;

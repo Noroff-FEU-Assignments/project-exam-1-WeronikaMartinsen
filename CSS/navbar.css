@@ -21,6 +21,7 @@ a {
   color: var(--gray);
   font-size: 1em;
   font-style: italic;
+  font-weight: 500;
 }
 a:hover,
 a:active {

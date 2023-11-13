@@ -2,20 +2,29 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 3em 0.5em 0 0.5em;
+  padding: 3em 0 1em 0;
   position: relative;
-}
-.hideNavList {
-  display: none;
+  overflow: hidden;
+  background-color: white;
+  z-index: 1000;
 }
 
-.navList {
+.navList ul {
   display: flex;
+  flex-direction: row;
   gap: 4em;
 }
-
+.navList ul li {
+  color: var(--gray);
+}
 a {
   color: var(--gray);
+  font-size: 1em;
+  font-style: italic;
+}
+a:hover,
+a:active {
+  color: var(--pink);
 }
 
 .logoImg {
@@ -23,10 +32,27 @@ a {
   margin-left: auto;
 }
 .navToggle {
+  margin-left: 1em;
   display: none;
   cursor: pointer;
 }
 .menu {
   font-size: 3em;
   color: var(--gray);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.btnMenu {
+  padding: 0.6em 1.5em;
+  background-color: var(--pink);
+  border-radius: 10px;
+  color: white;
+}
+.btnMenu:hover,
+.btnMenu:active {
+  color: var(--gray);
+  background-color: var(--lighter-pink);
 }

@@ -1,4 +1,6 @@
-body {
+body,
+html {
+  height: 100%;
   background: linear-gradient(
     to bottom,
     white,
@@ -15,6 +17,9 @@ body {
   font-family: "Edu TAS Beginner", cursive;
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
+}
+body {
+  margin-top: 9em;
 }
 
 :root {
@@ -34,6 +39,7 @@ p {
 ol,
 ul {
   text-align: left;
+  list-style-type: none;
 }
 h1,
 h2,

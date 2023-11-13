@@ -1,13 +1,16 @@
 @media (max-width: 785px) {
   .logoImg {
+    margin: 1em;
     width: 14em;
   }
-  .sizeBtn {
-    padding: 1em 2em;
+  .btnMenu {
+    padding: 0.4em;
+    margin-right: 1em;
   }
-  .navList {
-    gap: 2em;
+  .navList ul {
+    gap: 1.5em;
   }
+
   .postImg {
     width: 100%;
   }
@@ -22,45 +25,42 @@
   .myImage {
     width: 60%;
   }
-  .sizeBtn {
-    display: none;
-  }
 }
 
-@media (max-width: 553px) {
+@media (max-width: 584px) {
+  .navToggle {
+    display: block;
+  }
   .navList {
     display: none;
   }
-  .showNavList {
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 15em;
+    background-color: white;
+    top: 8em;
+    left: 0;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4em;
-    font-size: 1.2em;
-    position: absolute;
-    background: linear-gradient(
-      to bottom,
-      white,
-      var(--lighter-pink),
-      white,
-      var(--lighter-pink)
-    );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    top: 100%;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.5s;
+    gap: 2em;
+    margin-bottom: 2em;
+    padding: 0;
   }
+  .navList li {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 1em;
+  }
+
   form {
     display: block;
   }
 
-  .navToggle {
-    display: block;
-  }
   .logoDiv {
     margin-left: auto;
   }

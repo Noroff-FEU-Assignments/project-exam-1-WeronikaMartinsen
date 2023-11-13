@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2em 0 1em 0;
+  padding: 2em 0 0 0;
   position: relative;
   overflow: hidden;
   background-color: white;
@@ -22,10 +22,6 @@ a {
   font-size: 1em;
   font-style: italic;
   font-weight: 500;
-}
-a:hover,
-a:active {
-  color: var(--pink);
 }
 
 .logoImg {

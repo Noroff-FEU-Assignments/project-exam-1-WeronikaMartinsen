@@ -36,8 +36,6 @@ export async function displayPosts() {
     carouselContainer.innerHTML = "";
 
     posts.forEach((post) => {
-      console.log(posts);
-      console.log(post);
       const postCard = document.createElement("div");
       postCard.className = "postCard";
       postCard.innerHTML = `      
@@ -79,7 +77,6 @@ export async function displayPosts() {
     }
 
     nextButton.addEventListener("click", () => {
-      console.log("Button clicked");
       if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {
         moveCarousel(1);
       }
@@ -87,7 +84,6 @@ export async function displayPosts() {
     });
 
     prevButton.addEventListener("click", () => {
-      console.log("Button clicked");
       if (currentSlide > 0) {
         moveCarousel(-1);
       }
@@ -132,7 +128,7 @@ function showLoadingIndicator() {
 }
 function hideLoadingIndicator() {
   const loading = document.querySelector(".loadingIndicator");
-  loading.style.display = "none"; // Hide the loading indicator
+  loading.style.display = "none";
 }
 
 displayPosts();

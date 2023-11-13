@@ -56,6 +56,10 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+a:hover,
+a:active {
+  color: var(--pink);
+}
 
 .button-main {
   padding: 1em 4em;

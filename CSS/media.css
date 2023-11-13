@@ -16,6 +16,9 @@
   }
 }
 @media (max-width: 612px) {
+  .modalContent {
+    margin-top: 6em;
+  }
   #arrow {
     font-size: 2em;
   }

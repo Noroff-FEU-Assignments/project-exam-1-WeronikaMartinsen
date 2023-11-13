@@ -45,7 +45,7 @@ function createHtml(post) {
         <img class="postImg" src="${post.jetpack_featured_media_url}" alt="${post.better_featured_image.alt_text}">
     </div>
     <div class="modal">
-    <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+    <span><ion-icon  class="close" name="close-outline"></ion-icon></span>
     <div class="modalContent"><img src="" alt="${post.better_featured_image.alt_text}"class="modalImg"/>
     <span class="modalTxt"></span></div></div>
     <span class="widthH1">${post.content.rendered}</span>
@@ -57,17 +57,19 @@ function createHtml(post) {
   const modal = document.querySelector(".modal");
   const modalImg = document.querySelector(".modalImg");
   const modalTxt = document.querySelector(".modalTxt");
-  const close = document.querySelector(".close");
+
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("close")) {
+      console.log("Close button clicked!");
+      modal.classList.remove("appear");
+    }
+  });
 
   images.forEach((image) => {
     image.addEventListener("click", () => {
       modalImg.src = image.src;
       modalTxt.innerHTML = image.alt;
       modal.classList.add("appear");
-
-      close.addEventListener("click", () => {
-        modal.classList.remove("appear");
-      });
     });
   });
 }

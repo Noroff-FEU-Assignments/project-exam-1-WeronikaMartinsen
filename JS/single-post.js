@@ -7,7 +7,7 @@ function showError(message) {
   }
 }
 
-const singlePostUrl = "http://www.rainy-days.no/?rest_route=/wp/v2/posts/82";
+const singlePostUrl = "https://www.rainy-days.no/?rest_route=/wp/v2/posts/82";
 
 async function getPost() {
   const response = await fetch(singlePostUrl);

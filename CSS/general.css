@@ -60,10 +60,15 @@ a:hover,
 a:active {
   color: var(--pink);
 }
+img {
+  border-radius: var(--border-radius);
+}
+button {
+  border-radius: var(--border-radius);
+}
 
 .button-main {
   padding: 1em 4em;
-  border-radius: var(--border-radius);
   background-color: var(--pink);
   color: white;
   border: none;

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/single-post.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,6 +47,7 @@
     <script defer src="JS/navbar.js"></script>
     <script type="module" defer src="js/api.js"></script>
     <script defer src="js/footer.js"></script>
+    <script defer src="js/single-post.js"></script>
   </head>
   <body>
     <header>
@@ -53,47 +55,57 @@
         <div class="navbar"></div>
       </nav>
     </header>
-    <section>
-      <div class="hero-section">
-        <h1 class="sizeBig">Welcome to my web & dev world!</h1>
-        <span class="bold"
-          >Follow my journey as a mom in tech on 'Web Dev & Parenthood:
-        </span>
-        <span class="heroText"
-          >My Dual Adventure.' Explore coding insights, work-life balance, and
-          personal growth in this unique blog about navigating web development
-          and parenthood simultaneously!</span
-        >
-        <div class="search-bar">
-          <form>
-            <label class="visibility" for="searchInput">Hello</label>
-            <input id="searchInput" class="searchInput" type="text" />
-            <button class="button-main color">Search</button>
-          </form>
-        </div>
-
-        <h2 class="styleH2">New posts</h2>
-        <div class="slider-wrapper">
-          <button
-            class="slide-arrow"
-            id="slide-arrow-prev"
-            aria-label="Previous Slide"
+    <main>
+      <section>
+        <div class="hero-section">
+          <h1 class="sizeBig">Welcome to my web & dev world!</h1>
+          <span class="bold">Follow my journey as a mom in tech!</span>
+          <span class="heroText"
+            >My Dual Adventure.' Explore coding insights, work-life balance, and
+            personal growth in this unique blog about navigating web development
+            and parenthood simultaneously!</span
           >
-            <ion-icon id="arrow" name="chevron-back-outline"></ion-icon>
-          </button>
-          <div class="carousel">
-            <div class="loadingIndicator"></div>
+          <div class="search-bar">
+            <form>
+              <label class="visibility" for="searchInput">Hello</label>
+              <input id="searchInput" type="text" placeholder="Search.." />
+              <div class="searchIcon">
+                <ion-icon id="searchIcon" name="search-outline"></ion-icon>
+              </div>
+              <button class="button-main color">Search</button>
+            </form>
           </div>
-          <button
-            class="slide-arrow"
-            id="slide-arrow-next"
-            aria-label="Next Slide"
-          >
-            <ion-icon id="arrow" name="chevron-forward-outline"></ion-icon>
-          </button>
+
+          <h2 class="styleH2">New posts</h2>
+          <div class="slider-wrapper">
+            <button
+              class="slide-arrow"
+              id="slide-arrow-prev"
+              aria-label="Previous Slide"
+            >
+              <ion-icon id="arrow" name="chevron-back-outline"></ion-icon>
+            </button>
+            <div class="carousel">
+              <div class="loadingIndicator"></div>
+            </div>
+            <button
+              class="slide-arrow"
+              id="slide-arrow-next"
+              aria-label="Next Slide"
+            >
+              <ion-icon id="arrow" name="chevron-forward-outline"></ion-icon>
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="sectionColor">
+        <h1 class="sizeBig">The Best web&dev Post of the Year!</h1>
+        <span class="bold">Read my award-winning odyssey!</span>
+        <div class="singlePost"></div>
+      </section>
+    </main>
+
     <div class="footer"></div>
   </body>
 </html>

@@ -13,6 +13,8 @@ form {
 .search-bar {
   margin: 1em;
   width: 100%;
+  max-width: 800px;
+  position: relative;
 }
 .color {
   background-color: var(--gray);
@@ -24,10 +26,22 @@ form {
   background-color: var(--lighter-gray);
   color: var(--gray);
 }
-.searchInput {
+.search-bar input {
+  padding-left: 1em;
   width: 100%;
   background-color: white;
   border: 1px solid var(--gray);
+  padding-right: 2em;
+}
+.searchIcon {
+  position: absolute;
+  top: 53%;
+  transform: translateY(-50%);
+  right: 167px;
+  pointer-events: none;
+}
+#searchIcon {
+  color: var(--gray);
 }
 .carousel {
   margin: 1em;

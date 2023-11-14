@@ -1,3 +1,16 @@
+@media (max-width: 1032px) {
+  .postHomePage {
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+  }
+  .postHomePage img {
+    width: 100%;
+  }
+  .secondBox {
+    padding: 0.3em;
+  }
+}
 @media (max-width: 785px) {
   .logoImg {
     margin: 1em;
@@ -53,6 +66,13 @@
   }
   .navList {
     display: none;
+  }
+  .search-bar input {
+    width: 90%;
+  }
+  .searchIcon {
+    top: 43%;
+    right: 20px;
   }
 
   .linkList {

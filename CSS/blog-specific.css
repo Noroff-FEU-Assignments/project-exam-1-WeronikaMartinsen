@@ -24,7 +24,6 @@
 .postImg {
   width: 50%;
   cursor: pointer;
-  border-radius: 5px;
 }
 .postImg:hover {
   transform: scale(1.01);

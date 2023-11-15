@@ -32,8 +32,9 @@
   top: 0;
   left: 0;
   overflow-y: auto;
-  background-color: white;
+  background-color: var(--lighter-pink);
   border-right: 1px solid #ddd;
+  border-radius: var(--border-radius);
   padding-right: 1em;
 }
 .postImg {
@@ -54,7 +55,6 @@
 }
 .readMore {
   border: none;
-  background-color: none;
   margin-top: 1em;
   font-style: italic;
   text-decoration: none;

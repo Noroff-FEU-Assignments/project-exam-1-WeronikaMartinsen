@@ -30,10 +30,9 @@ async function displayPost() {
     <h2 class="titleDecoration">${post.title.rendered}</h2>
     <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
     <div class="secondBox">
-    <span>${post.excerpt.rendered}</span>
+    <span class=""more-link">${post.excerpt.rendered}</span>
     <span class="italic">"This post changed my life. I think every mom should read it."</span>
   <div><ion-icon id="star" name="star"></ion-icon><ion-icon id="star" name="star"></ion-icon><ion-icon id="star" name="star"></ion-icon><ion-icon id="star" name="star"></ion-icon><ion-icon id="star"name="star"></ion-icon></div></div>
-
     </div>`;
 
     const postHomePageSection = document.getElementById("postHomePageSection");

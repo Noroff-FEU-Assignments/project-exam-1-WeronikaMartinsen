@@ -124,3 +124,6 @@ input {
     transform: translateY(-15px);
   }
 }
+.more-link {
+  display: none;
+}

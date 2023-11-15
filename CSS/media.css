@@ -78,7 +78,7 @@
   .linkList {
     position: fixed;
     width: 100%;
-    height: 20em;
+    height: 25em;
     background-color: white;
     top: 7em;
     left: 0;
@@ -96,6 +96,9 @@
       white,
       var(--lighter-pink)
     );
+  }
+  .linkList a {
+    font-size: 1.3em;
   }
   .navList li {
     font-size: 4em;

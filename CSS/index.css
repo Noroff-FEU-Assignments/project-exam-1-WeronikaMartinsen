@@ -138,3 +138,13 @@ form {
 .sizeBig {
   font-size: 2em;
 }
+.linkToBlog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.linkToBlog a {
+  color: black;
+}

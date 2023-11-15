@@ -58,6 +58,9 @@
   .myImage {
     width: 60%;
   }
+  .color {
+    padding: 1em 3em;
+  }
 }
 
 @media (max-width: 594px) {
@@ -67,6 +70,7 @@
   .navList {
     display: none;
   }
+
   .search-bar input {
     width: 90%;
   }

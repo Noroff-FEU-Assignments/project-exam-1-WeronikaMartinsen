@@ -77,7 +77,7 @@ button {
 }
 .button-main:hover,
 .button-main:active {
-  background-color: #c85369;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sizeBtn {

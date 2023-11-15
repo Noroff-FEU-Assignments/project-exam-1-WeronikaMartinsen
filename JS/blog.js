@@ -1,3 +1,12 @@
+function showError(message) {
+  const errorContainer = document.querySelector(".posts");
+
+  if (errorContainer) {
+    errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
+  } else {
+  }
+}
+
 import { getPosts, displayPosts } from "./api.js";
 
 export async function filterPostsByCategory(categoryId) {
@@ -43,7 +52,7 @@ export async function filterPostsByCategory(categoryId) {
 
     hideLoadingIndicator();
   } catch (error) {
-    console.error("Error fetching and displaying posts:", error);
+    showError("Failed to fetch posts");
     hideLoadingIndicator();
   }
 }

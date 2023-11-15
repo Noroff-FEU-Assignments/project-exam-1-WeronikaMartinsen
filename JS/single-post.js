@@ -1,5 +1,5 @@
 function showError(message) {
-  const errorContainer = document.querySelector(".carousel");
+  const errorContainer = document.querySelector(".singlePost");
 
   if (errorContainer) {
     errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;

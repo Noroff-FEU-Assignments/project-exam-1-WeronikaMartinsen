@@ -18,14 +18,8 @@ form {
 }
 .color {
   background-color: var(--gray);
-  color: white;
 }
-.color:hover,
-.color:active {
-  border: 2px solid var(--gray);
-  background-color: var(--lighter-gray);
-  color: var(--gray);
-}
+
 .search-bar input {
   padding-left: 1em;
   width: 100%;
@@ -142,7 +136,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
   margin-top: 2em;
 }
 .linkToBlog a {

@@ -23,12 +23,17 @@ async function displayCategories() {
       categoryList.className = "categoryList";
       categoryList.innerHTML = `<div>
     <ul>
-      <li>${category.name}</li>
+      <li class="category-item" data-category-id="${category.id}">${category.name}</li>
       </ul>
       </div>    
       `;
 
       categoriesContainer.appendChild(categoryList);
+      const categoryItem = categoryList.querySelector(".category-item");
+      categoryItem.addEventListener("click", () => {
+        const categoryId = category.id;
+        filterPostsByCategory(categoryId);
+      });
     });
   } catch (error) {
     showError("Failed to fetch categories");

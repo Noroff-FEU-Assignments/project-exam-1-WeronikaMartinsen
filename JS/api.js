@@ -46,6 +46,7 @@ export async function displayPosts() {
       `;
       carouselContainer.appendChild(postCard);
     });
+
     const carousel = document.querySelector(".carousel");
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");

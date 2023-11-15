@@ -1,3 +1,5 @@
+import { filterPostsByCategory } from "./blog.js";
+
 const categoriesLink = "https://www.rainy-days.no/wp-json/wp/v2/categories";
 
 async function getCategories() {
@@ -29,6 +31,7 @@ async function displayCategories() {
       `;
 
       categoriesContainer.appendChild(categoryList);
+
       const categoryItem = categoryList.querySelector(".category-item");
       categoryItem.addEventListener("click", () => {
         const categoryId = category.id;

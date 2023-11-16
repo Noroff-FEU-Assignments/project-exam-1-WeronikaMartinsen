@@ -115,7 +115,7 @@ export async function displayPosts() {
 
     updateCarouselView();
   } catch (error) {
-    showError("Failed to fetch posts. Please try again later.");
+    showError("Failed to fetch posts");
   }
 }
 

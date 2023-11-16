@@ -1,18 +1,17 @@
-function showError(message) {
-  const errorContainer = document.querySelector(".singlePost");
-
-  if (errorContainer) {
-    errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
-  } else {
-  }
-}
+import {
+  showError,
+  showLoadingIndicator,
+  hideLoadingIndicator,
+} from "./functions.js";
 
 const singlePostUrl = "https://www.rainy-days.no/?rest_route=/wp/v2/posts/82";
 
 async function getPost() {
+  showLoadingIndicator();
   const response = await fetch(singlePostUrl);
   const result = await response.json();
   if (response.ok) {
+    hideLoadingIndicator();
     return result;
   } else {
     throw new Error("Fail to fetch");
@@ -21,7 +20,6 @@ async function getPost() {
 async function displayPost() {
   try {
     const post = await getPost();
-    console.log(post);
     const singlePostContainer = document.querySelector(".singlePost");
 
     singlePostContainer.innerHTML = "";
@@ -52,7 +50,7 @@ async function displayPost() {
 
     observer.observe(postHomePageSection);
   } catch (error) {
-    showError("Failed to fetch posts");
+    showError("Failed to fetch posts. Please try again later.");
   }
 }
 

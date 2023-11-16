@@ -116,10 +116,7 @@ form {
   margin-top: 1em;
   border-bottom: 2px solid var(--lighter-gray);
 }
-.spanDate {
-  font-size: 0.8em;
-  margin-top: 1em;
-}
+
 .divText {
   display: flex;
   flex-direction: column;

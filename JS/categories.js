@@ -1,12 +1,19 @@
+import {
+  showError,
+  showLoadingIndicator,
+  hideLoadingIndicator,
+} from "./functions.js";
+
 import { filterPostsByCategory } from "./blog.js";
 
 const categoriesLink = "https://www.rainy-days.no/wp-json/wp/v2/categories";
 
 async function getCategories() {
+  showLoadingIndicator();
   const response = await fetch(categoriesLink);
   const result = await response.json();
-
   if (response.ok) {
+    hideLoadingIndicator();
     return result;
   } else {
     throw new Error("Failed to fetch!");
@@ -20,7 +27,6 @@ async function displayCategories() {
 
     categoriesContainer.innerHTML = "";
     categories.forEach((category) => {
-      console.log(categories);
       const categoryList = document.createElement("div");
       categoryList.className = "categoryList";
       categoryList.innerHTML = `<div>
@@ -39,7 +45,7 @@ async function displayCategories() {
       });
     });
   } catch (error) {
-    showError("Failed to fetch categories");
+    showError("Failed to fetch categories.");
   }
 }
 displayCategories();

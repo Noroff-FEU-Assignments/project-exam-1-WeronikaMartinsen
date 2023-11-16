@@ -1,11 +1,8 @@
-function showError(message) {
-  const errorContainer = document.querySelector(".posts");
-
-  if (errorContainer) {
-    errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
-  } else {
-  }
-}
+import {
+  showError,
+  showLoadingIndicator,
+  hideLoadingIndicator,
+} from "./functions.js";
 
 import { getPosts, displayPosts } from "./api.js";
 
@@ -23,11 +20,14 @@ export async function filterPostsByCategory(categoryId) {
     );
 
     filteredPosts.forEach((post) => {
+      let formattedDate = new Date(Date.parse(post.date));
+      formattedDate = formattedDate.toLocaleString();
+
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
         <h2 class="titleDecoration">${post.title.rendered}</h2>
-        <span>${post.date}</span>
+        <span class="date">${formattedDate}</span>
         <div class="postImg"><a class="postImg" href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
         <span>${post.excerpt.rendered}</span>
         <span class="excerpt">${post.content.rendered}</span>
@@ -64,12 +64,15 @@ export async function fetchAndDisplayPosts() {
     const postContainer = document.querySelector(".posts");
 
     posts.forEach((post) => {
+      let formattedDate = new Date(Date.parse(post.date));
+      formattedDate = formattedDate.toLocaleString();
+
       console.log(posts);
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
       <h2 class="titleDecoration">${post.title.rendered}</h2>
-      <span>${post.date}</span>
+      <span class="date">${formattedDate}</span>
       <div class="postImg"><a class="postImg" href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
       <span>${post.excerpt.rendered}</span>
  
@@ -97,18 +100,6 @@ export async function fetchAndDisplayPosts() {
     console.error("Error fetching and displaying posts:", error);
     hideLoadingIndicator();
   }
-}
-function showLoadingIndicator() {
-  const loading = document.querySelector(".loading");
-  loading.innerHTML = `<div class="loading">
-    <div class="dot dot1"></div>
-    <div class="dot dot2"></div>
-    <div class="dot dot3"></div>
-  </div>`;
-}
-function hideLoadingIndicator() {
-  const loading = document.querySelector(".loadingIndicator");
-  loading.style.display = "none";
 }
 
 fetchAndDisplayPosts();

@@ -1,3 +1,9 @@
+import {
+  showError,
+  showLoadingIndicator,
+  hideLoadingIndicator,
+} from "./functions.js";
+
 function getPostIdFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
@@ -32,11 +38,14 @@ async function fetchPosts() {
     titleContainer.textContent = title;
     createHtml(singlePost);
   } catch (error) {
-    console.error("An error occurred:", error);
+    showError("Failed to fetch posts. Please try again later.");
   }
 }
 
 function createHtml(post) {
+  let formattedDate = new Date(Date.parse(post.date));
+  formattedDate = formattedDate.toLocaleString();
+
   console.log(post);
   const postContainer = document.querySelector(".postContainer");
   postContainer.innerHTML = `
@@ -49,7 +58,7 @@ function createHtml(post) {
     <div class="modalContent"><img src="" alt="${post.better_featured_image.alt_text}"class="modalImg"/>
     <span class="modalTxt"></span></div></div>
     <span class="widthH1">${post.content.rendered}</span>
-    <span>${post.date}</span>
+    <span class="date">${formattedDate}</span>
    
   `;
 
@@ -72,18 +81,6 @@ function createHtml(post) {
       modal.classList.add("appear");
     });
   });
-}
-function showLoadingIndicator() {
-  const loading = document.querySelector(".loadingIndicator");
-  loading.innerHTML = `<div class="loading">
-  <div class="dot dot1"></div>
-  <div class="dot dot2"></div>
-  <div class="dot dot3"></div>
-</div>`;
-}
-function hideLoadingIndicator() {
-  const loading = document.querySelector(".loadingIndicator");
-  loading.style.display = "none";
 }
 
 fetchPosts();

@@ -1,11 +1,8 @@
-function showError(message) {
-  const errorContainer = document.querySelector(".carousel");
-
-  if (errorContainer) {
-    errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
-  } else {
-  }
-}
+import {
+  showError,
+  showLoadingIndicator,
+  hideLoadingIndicator,
+} from "./functions.js";
 
 const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";
 
@@ -36,12 +33,15 @@ export async function displayPosts() {
     carouselContainer.innerHTML = "";
 
     posts.forEach((post) => {
+      let formattedDate = new Date(Date.parse(post.date));
+      formattedDate = formattedDate.toLocaleString();
+
       const postCard = document.createElement("div");
       postCard.className = "postCard";
       postCard.innerHTML = `      
       
       <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImg" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
-        <div class="divText"><h5>${post.title.rendered}</h5><span class="spanDate">${post.date}</span></div>
+        <div class="divText"><h5>${post.title.rendered}</h5><span class="date">${formattedDate}</span></div>
                     
       `;
       carouselContainer.appendChild(postCard);
@@ -67,7 +67,6 @@ export async function displayPosts() {
 
     function handleSwipe() {
       const minSwipeDistance = 50;
-
       const swipeDistance = touchEndX - touchStartX;
 
       if (swipeDistance > minSwipeDistance) {
@@ -116,20 +115,8 @@ export async function displayPosts() {
 
     updateCarouselView();
   } catch (error) {
-    showError("Failed to fetch posts");
+    showError("Failed to fetch posts. Please try again later.");
   }
-}
-function showLoadingIndicator() {
-  const loading = document.querySelector(".loadingIndicator");
-  loading.innerHTML = `<div class="loading">
-  <div class="dot dot1"></div>
-  <div class="dot dot2"></div>
-  <div class="dot dot3"></div>
-</div>`;
-}
-function hideLoadingIndicator() {
-  const loading = document.querySelector(".loadingIndicator");
-  loading.style.display = "none";
 }
 
 displayPosts();

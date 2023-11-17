@@ -11,7 +11,6 @@ export async function filterPostsByCategory(categoryId) {
   try {
     const posts = await getPosts();
     const postContainer = document.querySelector(".posts");
-
     postContainer.innerHTML = "";
 
     const filteredPosts = posts.filter(
@@ -67,7 +66,6 @@ export async function fetchAndDisplayPosts() {
       let formattedDate = new Date(Date.parse(post.date));
       formattedDate = formattedDate.toLocaleString();
 
-      console.log(posts);
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
@@ -97,7 +95,7 @@ export async function fetchAndDisplayPosts() {
     });
     hideLoadingIndicator();
   } catch (error) {
-    showError("Failed to fetch posts");
+    showError("Failed to fetch or process posts");
     hideLoadingIndicator();
   }
 }

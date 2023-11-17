@@ -1,4 +1,8 @@
-import { showLoadingIndicator, hideLoadingIndicator } from "./functions.js";
+import {
+  showLoadingIndicator,
+  hideLoadingIndicator,
+  showError,
+} from "./functions.js";
 
 import { filterPostsByCategory } from "./blog.js";
 
@@ -11,8 +15,6 @@ async function getCategories() {
   if (response.ok) {
     hideLoadingIndicator();
     return result;
-  } else {
-    throw new Error("Failed to fetch!");
   }
 }
 
@@ -41,7 +43,7 @@ async function displayCategories() {
       });
     });
   } catch (error) {
-    console.log("Failed to fetch categories.");
+    showError("Failed to fetch posts");
   }
 }
 displayCategories();

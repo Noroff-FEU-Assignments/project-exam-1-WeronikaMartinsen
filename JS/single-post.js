@@ -1,4 +1,8 @@
-import { showLoadingIndicator, hideLoadingIndicator } from "./functions.js";
+import {
+  showLoadingIndicator,
+  hideLoadingIndicator,
+  showError,
+} from "./functions.js";
 
 const singlePostUrl = "https://www.rainy-days.no/?rest_route=/wp/v2/posts/82";
 

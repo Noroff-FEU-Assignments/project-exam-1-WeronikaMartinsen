@@ -1,5 +1,6 @@
 export function showError(message) {
-  const errorContainer = document.getElementById("errorMessage");
+  const errorContainer = document.querySelectorAll(".errorMessage");
+
   if (errorContainer) {
     errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
   }

@@ -97,7 +97,7 @@ export async function fetchAndDisplayPosts() {
     });
     hideLoadingIndicator();
   } catch (error) {
-    console.error("Error fetching and displaying posts:", error);
+    showError("Failed to fetch posts");
     hideLoadingIndicator();
   }
 }

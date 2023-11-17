@@ -1,8 +1,4 @@
-import {
-  showError,
-  showLoadingIndicator,
-  hideLoadingIndicator,
-} from "./functions.js";
+import { showLoadingIndicator, hideLoadingIndicator } from "./functions.js";
 
 import { filterPostsByCategory } from "./blog.js";
 
@@ -45,7 +41,7 @@ async function displayCategories() {
       });
     });
   } catch (error) {
-    showError("Failed to fetch categories.");
+    console.log("Failed to fetch categories.");
   }
 }
 displayCategories();

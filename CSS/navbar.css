@@ -42,13 +42,7 @@ a {
   top: 0;
   width: 100%;
 }
-.btnMenu {
-  padding: 0.6em 1.5em;
-  background-color: var(--pink);
-  color: white;
-}
-.btnMenu:hover,
-.btnMenu:active {
-  color: var(--gray);
-  background-color: var(--lighter-pink);
+.btn-nav {
+  color: var(--pink);
+  font-weight: 700;
 }

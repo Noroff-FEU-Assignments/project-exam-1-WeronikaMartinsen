@@ -17,7 +17,8 @@ form {
   position: relative;
 }
 .color {
-  background-color: var(--gray);
+  background-color: var(--pink);
+  color: white;
 }
 
 .search-bar input {

@@ -16,10 +16,7 @@
     margin: 1em;
     width: 14em;
   }
-  .btnMenu {
-    padding: 0.4em;
-    margin-right: 1em;
-  }
+
   .navList ul {
     gap: 1.4em;
   }
@@ -58,9 +55,6 @@
   .myImage {
     width: 60%;
   }
-  .color {
-    padding: 1em 3em;
-  }
 }
 
 @media (max-width: 594px) {
@@ -75,8 +69,12 @@
     width: 90%;
   }
   .searchIcon {
-    top: 43%;
+    top: 35%;
     right: 20px;
+  }
+  .color {
+    margin-top: 2em;
+    padding: 1em 5em;
   }
 
   .linkList {
@@ -105,7 +103,7 @@
     font-size: 1.3em;
   }
   .navList li {
-    font-size: 4em;
+    font-size: 3.5em;
     display: block;
     margin-bottom: 2em;
   }
@@ -125,4 +123,7 @@
     padding: 0.4em 1em;
     font-size: 0.9em;
   }
+}
+
+@media (max-width: 550px) {
 }

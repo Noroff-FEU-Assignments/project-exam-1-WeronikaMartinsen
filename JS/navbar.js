@@ -7,8 +7,8 @@ navbar.innerHTML = `<div class="navContainer sticky">
 <ul class="linkList">
 <li><a href="/html/blog.html">Blog</a></li>
 <li><a href="/html/about.html">About</a></li>
-<li><a href="/html/contact.html">Contact</a></li>
-<li><a class="btnMenu">Chat me</a></li>
+<li><a class="btn-nav" href="/html/contact.html">Contact me</a></li>
+
 </ul></div>
 </div>`;
 document.addEventListener("DOMContentLoaded", function () {

@@ -5,6 +5,7 @@ navbar.innerHTML = `<div class="navContainer sticky">
 <a href="/index.html" class="logoDiv"><img class="logoImg"src="/images/logo.png" alt="My personal "web&dev" logo."/></a>
 <div class="navList">
 <ul class="linkList">
+<li><a href="/html/blog.html">Home</a></li>
 <li><a href="/html/blog.html">Blog</a></li>
 <li><a href="/html/about.html">About</a></li>
 <li><a class="btn-nav" href="/html/contact.html">Contact me</a></li>

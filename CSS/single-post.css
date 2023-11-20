@@ -19,9 +19,6 @@
   border-radius: var(--border-radius);
   background-color: white;
   margin-top: 1em;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .postHomePage.show {
   opacity: 1;

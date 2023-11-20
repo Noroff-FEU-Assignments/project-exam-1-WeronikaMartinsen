@@ -1,7 +1,7 @@
 .navContainer {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   padding: 1em 0 1em 0;
   position: relative;
   overflow: hidden;
@@ -17,10 +17,14 @@
 .navList ul li {
   color: var(--gray);
 }
-a {
+.navList ul li a {
   color: var(--gray);
   font-size: 1em;
   font-weight: 500;
+}
+.navList ul li a:hover,
+.navList ul li a:active {
+  text-decoration: 4px underline white;
 }
 
 .logoImg {
@@ -31,10 +35,12 @@ a {
   margin-left: 1em;
   display: none;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 .menu {
   font-size: 3em;
   color: var(--gray);
+  transition: transform 0.3s ease;
 }
 .sticky {
   position: fixed;
@@ -46,4 +52,8 @@ a {
   font-weight: 600;
   background-color: white;
   padding: 0.3em;
+}
+.linkList {
+  display: none;
+  transition: opacity 0.3s ease;
 }

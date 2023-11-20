@@ -25,7 +25,7 @@ async function displayPost() {
     singlePostContainer.innerHTML = "";
     singlePostContainer.innerHTML = `<div class="postHomePage" id="postHomePageSection">
     <div class="firstBox">
-    <h2 class="titleDecoration">${post.title.rendered}</h2>
+    <h3 class="titleDecoration">${post.title.rendered}</h3>
     <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
     <div class="secondBox">
     <span>${post.excerpt.rendered}</span>

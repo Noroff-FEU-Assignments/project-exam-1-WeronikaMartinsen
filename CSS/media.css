@@ -16,10 +16,14 @@
   .hero-section {
     padding: 0;
     padding-left: 1em;
-    height: 750px;
+    height: 550px;
   }
 }
 @media (max-width: 785px) {
+  .hero-box {
+    padding-left: 2em;
+    max-width: 23em;
+  }
   .logoImg {
     width: 12em;
   }
@@ -76,7 +80,6 @@
   .navList {
     display: none;
   }
-
   .search-bar input {
     width: 90%;
   }
@@ -89,19 +92,17 @@
     padding: 1.2em 6em;
   }
 
-  .linkList {
-    position: fixed;
-    width: 100%;
-    height: 25em;
-    background-color: white;
-    top: 6em;
-    right: 0;
-    text-align: center;
+  .active {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3em;
+    position: fixed;
+    width: 100%;
+    height: 25em;
+    top: 7em;
+    right: 0;
+    text-align: center;
     background: linear-gradient(
       to bottom,
       white,
@@ -110,12 +111,18 @@
       var(--lighter-pink)
     );
   }
-  .linkList a {
-    font-size: 1.3em;
+
+  .navList ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    gap: 3em;
   }
-  .navList li {
-    font-size: 3.5em;
-    display: block;
+  .navList ul li a:hover,
+  .navList ul li a:active {
+    text-decoration: 4px underline var(--pink);
   }
 
   form {
@@ -129,16 +136,11 @@
     padding: 0.4em 1em;
     font-size: 0.9em;
   }
-
-  .hero-box {
-    padding: 0;
-    max-width: 23em;
-  }
   .btnCTA {
     font-size: 0.8em;
     padding: 1em 3em;
   }
-}
-
-@media (max-width: 550px) {
+  .hero-box {
+    padding-left: 1em;
+  }
 }

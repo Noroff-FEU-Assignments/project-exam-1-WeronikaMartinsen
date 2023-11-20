@@ -55,7 +55,7 @@ function createHtml(post) {
   console.log(post);
   const postContainer = document.querySelector(".postContainer");
   postContainer.innerHTML = `
-  <h1 class="titleDecoration widthH1 maxWidth">${post.title.rendered}</h1><span class="biggerDate">${formattedDate}</span>
+  <h2 class="titleDecoration widthH1 maxWidth">${post.title.rendered}</h2><span class="biggerDate">${formattedDate}</span>
     <div class="imgDiv">
         <img class="postImg" src="${post.jetpack_featured_media_url}" alt="${post.better_featured_image.alt_text}">
     </div>

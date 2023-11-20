@@ -12,10 +12,15 @@ navbar.innerHTML = `<div class="navContainer sticky">
 </div>`;
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".navToggle");
-  const navList = document.querySelector(".navList");
+  const linkList = document.querySelector(".navList");
+  const menuIcon = document.querySelector(".menu");
 
   menuToggle.addEventListener("click", () => {
-    console.log("Menu button clicked!");
-    navList.classList.toggle("navList");
+    linkList.classList.toggle("active");
+    if (linkList.classList.contains("active")) {
+      menuIcon.setAttribute("name", "close-outline");
+    } else {
+      menuIcon.setAttribute("name", "menu-outline");
+    }
   });
 });

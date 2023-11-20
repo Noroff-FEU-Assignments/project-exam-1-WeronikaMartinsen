@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em;
   border-bottom: var(--lighter-gray);
   text-align: center;
   margin-top: 2em;
@@ -127,16 +127,7 @@ form {
 .sizeBig {
   font-size: 2em;
 }
-.linkToBlog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-  margin-top: 2em;
-}
-.linkToBlog a {
-  color: black;
-}
+
 .divText h5 {
   margin-top: 2em;
 }

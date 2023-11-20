@@ -64,8 +64,10 @@ function createHtml(post) {
     <div class="modalContent"><img src="" alt="${post.better_featured_image.alt_text}"class="modalImg"/>
     <span class="modalTxt"></span></div></div>
     <span class="widthH1">${post.content.rendered}</span>
-    
-   
+    <div class="linkToBlog">
+          <a href="blog.html">Back to blog &rarr;</a
+          >
+        </div>
   `;
 
   const images = document.querySelectorAll(".postImg");

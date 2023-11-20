@@ -69,3 +69,6 @@
   cursor: pointer;
   color: var(--pink);
 }
+.extraMargin {
+  margin-top: 5em;
+}

@@ -146,3 +146,11 @@ form {
   padding: 0.7em;
   width: 30%;
 }
+.linkToBlog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 2em;
+  font-style: italic;
+}

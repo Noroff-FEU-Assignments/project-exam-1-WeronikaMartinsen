@@ -17,6 +17,7 @@ html {
   font-family: "Edu TAS Beginner", cursive;
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
+  color: var(--gray);
 }
 body {
   margin-top: 7em;

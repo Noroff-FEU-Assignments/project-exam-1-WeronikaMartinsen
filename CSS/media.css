@@ -21,14 +21,11 @@
 }
 @media (max-width: 785px) {
   .logoImg {
-    margin: 1em;
-    width: 14em;
+    width: 12em;
   }
-
   .navList ul {
     gap: 1.4em;
   }
-
   .postImg {
     width: 100%;
   }
@@ -66,8 +63,15 @@
 }
 
 @media (max-width: 594px) {
+  .navContainer {
+    justify-content: space-between;
+  }
+  .logoImg {
+    margin-left: 1em;
+  }
   .navToggle {
     display: block;
+    margin: 2em 1em 0 0;
   }
   .navList {
     display: none;
@@ -90,15 +94,14 @@
     width: 100%;
     height: 25em;
     background-color: white;
-    top: 7em;
-    left: 0;
+    top: 6em;
+    right: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 3em;
-    padding: 0;
     background: linear-gradient(
       to bottom,
       white,
@@ -113,15 +116,10 @@
   .navList li {
     font-size: 3.5em;
     display: block;
-    margin-bottom: 2em;
   }
 
   form {
     display: block;
-  }
-
-  .logoDiv {
-    margin-left: auto;
   }
 
   .footer-gap {

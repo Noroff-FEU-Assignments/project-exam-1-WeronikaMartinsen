@@ -135,21 +135,21 @@ form {
   background-image: url("/images/newBG.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   color: var(--gray);
   text-align: center;
+  padding-left: 8em;
 }
 .hero-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
-  margin-left: 3em;
+  max-width: 600px;
 }
 .h2-hero {
   font-size: 1.2em;

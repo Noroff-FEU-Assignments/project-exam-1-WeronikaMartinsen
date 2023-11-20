@@ -2,7 +2,7 @@ const navbar = document.querySelector(".navbar");
 
 navbar.innerHTML = `<div class="navContainer sticky">
 <div class="navToggle"><ion-icon name="menu-outline" class="menu"></ion-icon></div>
-<a href="/index.html" class="logoDiv"><img class="logoImg"src="/images/logo.png" alt="My personal "web&dev" logo."/></a>
+<a href="/index.html" class="logoDiv"><img class="logoImg"src="/images/newLogo.png" alt="My personal "web&dev" logo."/></a>
 <div class="navList">
 <ul class="linkList">
 <li><a href="/index.html">Home</a></li>

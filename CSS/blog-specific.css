@@ -8,7 +8,6 @@
 }
 .widthH1 {
   width: 90%;
-  margin-bottom: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,4 +83,7 @@
   to {
     transform: scale(1);
   }
+}
+.maxWidth {
+  max-width: 800px;
 }

@@ -33,15 +33,22 @@ export async function displayPosts() {
     carouselContainer.innerHTML = "";
 
     posts.forEach((post) => {
-      let formattedDate = new Date(Date.parse(post.date));
-      formattedDate = formattedDate.toLocaleString();
+      console.log(post);
+      let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
+        "en-US",
+        {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }
+      );
 
       const postCard = document.createElement("div");
       postCard.className = "postCard";
       postCard.innerHTML = `      
       
       <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImg" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
-        <div class="divText"><h5>${post.title.rendered}</h5><span class="date">${formattedDate}</span></div>
+        <div class="divText"><span class="date">${formattedDate}</span><h5>${post.title.rendered}</h5></div>
                     
       `;
       carouselContainer.appendChild(postCard);

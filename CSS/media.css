@@ -12,6 +12,12 @@
   }
 }
 @media (max-width: 785px) {
+  .hero-box {
+    max-width: 400px;
+  }
+  .hero-section {
+    height: 600px;
+  }
   .logoImg {
     margin: 1em;
     width: 14em;
@@ -43,6 +49,14 @@
   }
 }
 @media (max-width: 612px) {
+  .hero-box {
+    max-width: 300px;
+    margin: 5em 0 0 1em;
+  }
+  .hero-section {
+    justify-content: start;
+    align-items: start;
+  }
   .modalContent {
     margin-top: 6em;
   }

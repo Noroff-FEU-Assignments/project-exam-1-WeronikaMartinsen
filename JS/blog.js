@@ -19,8 +19,14 @@ export async function filterPostsByCategory(categoryId) {
     );
 
     filteredPosts.forEach((post) => {
-      let formattedDate = new Date(Date.parse(post.date));
-      formattedDate = formattedDate.toLocaleString();
+      let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
+        "en-US",
+        {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }
+      );
 
       const postBlog = document.createElement("div");
       postBlog.className = "post";
@@ -63,17 +69,22 @@ export async function fetchAndDisplayPosts() {
     const postContainer = document.querySelector(".posts");
 
     posts.forEach((post) => {
-      let formattedDate = new Date(Date.parse(post.date));
-      formattedDate = formattedDate.toLocaleString();
+      let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
+        "en-US",
+        {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }
+      );
 
       const postBlog = document.createElement("div");
       postBlog.className = "post";
       postBlog.innerHTML = `      
       <h2 class="titleDecoration">${post.title.rendered}</h2>
-      <span class="date">${formattedDate}</span>
+      <span class="biggerDate">${formattedDate}</span>
       <div class="postImg"><a class="postImg" href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
       <span>${post.excerpt.rendered}</span>
- 
       <span class="excerpt">${post.content.rendered}</span>
       <a class="readMore">Read more...</a>
       `;

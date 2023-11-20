@@ -43,13 +43,19 @@ async function fetchPosts() {
 }
 
 function createHtml(post) {
-  let formattedDate = new Date(Date.parse(post.date));
-  formattedDate = formattedDate.toLocaleString();
+  let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
+    "en-US",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }
+  );
 
   console.log(post);
   const postContainer = document.querySelector(".postContainer");
   postContainer.innerHTML = `
-  <h1 class="titleDecoration widthH1">${post.title.rendered}</h1>
+  <h1 class="titleDecoration widthH1 maxWidth">${post.title.rendered}</h1><span class="biggerDate">${formattedDate}</span>
     <div class="imgDiv">
         <img class="postImg" src="${post.jetpack_featured_media_url}" alt="${post.better_featured_image.alt_text}">
     </div>
@@ -58,7 +64,7 @@ function createHtml(post) {
     <div class="modalContent"><img src="" alt="${post.better_featured_image.alt_text}"class="modalImg"/>
     <span class="modalTxt"></span></div></div>
     <span class="widthH1">${post.content.rendered}</span>
-    <span class="date">${formattedDate}</span>
+    
    
   `;
 

@@ -1,4 +1,4 @@
-.hero-section {
+.carousel-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,6 +6,7 @@
   padding: 1em;
   border-bottom: var(--lighter-gray);
   text-align: center;
+  margin-top: 2em;
 }
 form {
   display: flex;
@@ -58,7 +59,7 @@ form {
   border: 1px solid var(--lighter-gray);
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
-  height: 17em;
+  height: 19em;
   min-width: 13em;
   max-width: 13em;
   overflow: hidden;
@@ -83,11 +84,7 @@ form {
 .heroText {
   max-width: 60em;
   margin-bottom: 2em;
-}
-.bold {
-  font-weight: 600;
-  font-size: 1.2em;
-  margin-bottom: 0.3em;
+  font-style: italic;
 }
 .slide-arrow {
   cursor: pointer;
@@ -139,4 +136,30 @@ form {
 }
 .linkToBlog a {
   color: black;
+}
+.divText h5 {
+  margin-top: 2em;
+}
+.hero-section {
+  background-image: url("/images/newBG.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: var(--gray);
+  text-align: center;
+}
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin-left: 3em;
+}
+.h2-hero {
+  font-size: 1.2em;
 }

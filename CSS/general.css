@@ -161,3 +161,7 @@ form {
   margin-top: 2em;
   font-style: italic;
 }
+.h2-hero {
+  font-size: 1.2em;
+  color: var(--pink);
+}

@@ -155,10 +155,7 @@ form {
   width: 25em;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
 }
-.h2-hero {
-  font-size: 1.2em;
-  color: var(--pink);
-}
+
 .noMargin {
   margin-bottom: 0;
 }

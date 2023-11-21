@@ -125,7 +125,7 @@ form {
   opacity: 0;
 }
 .sizeBig {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 .divText h5 {
   margin-top: 2em;
@@ -156,5 +156,12 @@ form {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
 }
 .h2-hero {
-  font-size: 1.1em;
+  font-size: 1.2em;
+  color: var(--pink);
+}
+.noMargin {
+  margin-bottom: 0;
+}
+.marginBottom {
+  margin-bottom: 1em;
 }

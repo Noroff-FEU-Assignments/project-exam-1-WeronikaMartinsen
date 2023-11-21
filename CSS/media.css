@@ -10,6 +10,9 @@
   .secondBox {
     padding: 0.3em;
   }
+  .categories {
+    left: 0;
+  }
 }
 @media (max-width: 785px) {
   .logoImg {

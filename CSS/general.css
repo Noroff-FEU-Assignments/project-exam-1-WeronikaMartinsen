@@ -80,6 +80,8 @@ button {
   color: white;
   margin-left: auto;
 }
+.btnCTA:hover,
+.btnCTA:active,
 .button-main:hover,
 .button-main:active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

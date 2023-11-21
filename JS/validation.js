@@ -127,7 +127,7 @@ function validateForm() {
 function openOverlay() {
   const overlay = document.createElement("div");
   overlay.classList.add("overlayMessage");
-  overlay.innerHTML = `<ion-icon class="closeIcon" name="close-outline" onclick="closeOverlay()"></ion-icon><h3>Thank you for contacting me!</h3>
+  overlay.innerHTML = `<ion-icon class="closeIcon" name="close-outline" onclick="closeOverlay()"></ion-icon><h3 class="contact-color">Thank you for contacting me!</h3>
     <span>I will answer you as fast as It will be possible.</span>
     <a href="/html/blog.html" class="button-main spanOverlay">Go to posts</a>`;
 

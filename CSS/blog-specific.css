@@ -22,7 +22,8 @@
   margin-bottom: 1em;
 }
 .postImg {
-  width: 50%;
+  margin-top: 1em;
+  width: 30em;
   cursor: pointer;
 }
 .postImg:hover {

@@ -25,19 +25,18 @@
 }
 .categories {
   font-size: 0.9em;
-  margin-top: 10em;
+  margin-top: 12em;
   position: fixed;
-  width: 15%;
+  width: max-content;
   height: max-content;
-  top: 0;
-  left: 0;
+  top: 4em;
+  left: 4em;
   overflow-y: auto;
-  background-color: white;
   border: 1px solid var(--lighter-gray);
   border-radius: var(--border-radius);
-  padding-right: 1em;
+  padding-right: 1.2em;
 }
-.postImg {
+.postBlogImage {
   display: flex;
   justify-content: center;
   align-items: center;

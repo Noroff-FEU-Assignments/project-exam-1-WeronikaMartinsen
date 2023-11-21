@@ -10,20 +10,8 @@
   .secondBox {
     padding: 0.3em;
   }
-  .hero-box {
-    padding-right: 4em;
-  }
-  .hero-section {
-    padding: 0;
-    padding-left: 1em;
-    height: 550px;
-  }
 }
 @media (max-width: 785px) {
-  .hero-box {
-    padding-left: 2em;
-    max-width: 23em;
-  }
   .logoImg {
     width: 12em;
   }
@@ -50,6 +38,19 @@
   .posts {
     width: 90%;
   }
+  .hero-section {
+    flex-direction: column-reverse;
+    gap: 0;
+    padding: 0;
+    padding-top: 4em;
+    margin-bottom: 3em;
+  }
+  .hero-image img {
+    max-width: 80%;
+  }
+  .hero-box {
+    max-width: 600px;
+  }
 }
 @media (max-width: 612px) {
   .modalContent {
@@ -60,9 +61,6 @@
   }
   .contactInfo {
     flex-wrap: wrap;
-  }
-  .myImage {
-    width: 60%;
   }
 }
 
@@ -90,6 +88,9 @@
   .color {
     margin-top: 2em;
     padding: 1.2em 6em;
+  }
+  .linkList {
+    padding: 0;
   }
 
   .active {
@@ -128,19 +129,15 @@
   form {
     display: block;
   }
+  .myImage {
+    max-width: 70%;
+  }
 
   .footer-gap {
     gap: 2em;
   }
   .netlifyLink {
-    padding: 0.4em 1em;
-    font-size: 0.9em;
-  }
-  .btnCTA {
+    padding: 0.4em 1.2em;
     font-size: 0.8em;
-    padding: 1em 3em;
-  }
-  .hero-box {
-    padding-left: 1em;
   }
 }

@@ -7,14 +7,16 @@
   color: var(--gray);
 }
 .footerBox {
+  width: 100%;
   display: flex;
-  margin: 1em;
+  justify-content: center;
+  margin: 1em 0 1em 0;
 }
 .footer-gap {
   gap: 4em;
 }
 .gap {
-  gap: 1em;
+  gap: 0.5em;
 }
 #footerIcon {
   font-size: 1.5em;

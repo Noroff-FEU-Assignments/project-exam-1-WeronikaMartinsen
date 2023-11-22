@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1em;
@@ -24,17 +25,15 @@
   width: 60%;
 }
 .categories {
-  font-size: 0.9em;
-  margin-top: 12em;
-  position: fixed;
-  width: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: static;
   height: max-content;
-  top: 4em;
-  left: 4em;
-  overflow-y: auto;
-  border: 1px solid var(--lighter-gray);
-  border-radius: var(--border-radius);
-  padding-right: 1.2em;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 .postBlogImage {
   display: flex;
@@ -69,5 +68,5 @@
   color: var(--pink);
 }
 .extraMargin {
-  margin-top: 6em;
+  margin-top: 5em;
 }

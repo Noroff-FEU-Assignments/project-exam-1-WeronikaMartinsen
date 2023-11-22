@@ -8,37 +8,7 @@
   text-align: center;
   margin-top: 2em;
 }
-form {
-  display: flex;
-}
-.search-bar {
-  margin: 1em;
-  width: 100%;
-  max-width: 800px;
-  position: relative;
-}
-.color {
-  background-color: var(--pink);
-  color: white;
-}
 
-.search-bar input {
-  padding-left: 1em;
-  width: 100%;
-  background-color: white;
-  border: 1px solid var(--gray);
-  padding-right: 2em;
-}
-.searchIcon {
-  position: absolute;
-  top: 53%;
-  transform: translateY(-50%);
-  right: 167px;
-  pointer-events: none;
-}
-#searchIcon {
-  color: var(--gray);
-}
 .carousel {
   margin: 1em;
   gap: 0.9em;
@@ -51,7 +21,7 @@ form {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
-.postCard {
+.carousel-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,7 +54,7 @@ form {
 .heroText {
   max-width: 60em;
   margin-bottom: 2em;
-  font-style: italic;
+  text-align: center;
 }
 .slide-arrow {
   cursor: pointer;
@@ -108,7 +78,6 @@ form {
   font-size: 3em;
 }
 .styleH2 {
-  letter-spacing: 0.1em;
   color: var(--gray);
   margin-bottom: 0;
   margin-top: 1em;
@@ -161,4 +130,11 @@ form {
 }
 .marginBottom {
   margin-bottom: 1em;
+}
+#animatedText {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 24px;
+  border-right: 2px solid #333; /* Optional: simulate a typing cursor */
+  padding-right: 5px; /* Optional: create space for the cursor */
 }

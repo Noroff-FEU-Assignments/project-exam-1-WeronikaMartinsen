@@ -2,7 +2,15 @@ import {
   showError,
   showLoadingIndicator,
   hideLoadingIndicator,
+  animateText,
 } from "./functions.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("animatedText");
+  const textContent = "Welcome to my blog!";
+
+  animateText(textElement, textContent);
+});
 
 const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";
 
@@ -29,7 +37,6 @@ export async function displayPosts() {
   try {
     const posts = await getPosts();
     const carouselContainer = document.querySelector(".carousel");
-
     carouselContainer.innerHTML = "";
 
     posts.forEach((post) => {
@@ -44,7 +51,7 @@ export async function displayPosts() {
       );
 
       const postCard = document.createElement("div");
-      postCard.className = "postCard";
+      postCard.className = "carousel-card";
       postCard.innerHTML = `      
       
       <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="imgHero" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
@@ -109,14 +116,18 @@ export async function displayPosts() {
     function updateCarouselView() {
       const startIndex = currentSlide * numVisiblePosts;
       const endIndex = startIndex + numVisiblePosts;
-      const postCards = carousel.querySelectorAll(".postCard");
+      const carouselCards = carousel.querySelectorAll(".carousel-card");
 
-      postCards.forEach((card) => {
+      carouselCards.forEach((card) => {
         card.style.display = "none";
       });
 
-      for (let i = startIndex; i < Math.min(endIndex, postCards.length); i++) {
-        postCards[i].style.display = "block";
+      for (
+        let i = startIndex;
+        i < Math.min(endIndex, carouselCards.length);
+        i++
+      ) {
+        carouselCards[i].style.display = "block";
       }
     }
 

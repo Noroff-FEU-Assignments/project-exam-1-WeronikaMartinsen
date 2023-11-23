@@ -33,9 +33,9 @@
   min-width: 13em;
   max-width: 13em;
   overflow: hidden;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
-.postCard:hover {
+.carousel-card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }

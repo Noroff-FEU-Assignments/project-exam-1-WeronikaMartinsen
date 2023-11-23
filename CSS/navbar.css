@@ -54,6 +54,7 @@
 }
 .btn-nav:hover,
 .btn-nav:active {
+  box-shadow: var(--box-shadow);
   background-color: var(--light-pink);
 }
 

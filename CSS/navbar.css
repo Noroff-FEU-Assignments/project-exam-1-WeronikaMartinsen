@@ -20,7 +20,8 @@
 .navList ul li a {
   color: var(--gray);
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .navList ul li a:hover,
 .navList ul li a:active {
@@ -54,6 +55,7 @@
 }
 .btn-nav:hover,
 .btn-nav:active {
+  color: white;
   box-shadow: var(--box-shadow);
   background-color: var(--light-pink);
 }

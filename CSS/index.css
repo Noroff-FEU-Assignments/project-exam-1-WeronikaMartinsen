@@ -34,10 +34,15 @@
   max-width: 13em;
   overflow: hidden;
   box-shadow: var(--box-shadow);
+  opacity: 0.2;
 }
 .carousel-card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+}
+.carousel-card.active-carousel {
+  opacity: 1;
+  border: 2px solid white;
 }
 .imgDiv {
   width: 100%;
@@ -93,9 +98,7 @@
 .visibility {
   opacity: 0;
 }
-.sizeBig {
-  font-size: 1.7em;
-}
+
 .divText h5 {
   margin: 2em 1em;
 }
@@ -129,7 +132,8 @@
   margin-bottom: 0;
 }
 .marginBottom {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 #animatedText {
   overflow: hidden;
@@ -137,4 +141,24 @@
   font-size: 24px;
   border-right: 2px solid #333; /* Optional: simulate a typing cursor */
   padding-right: 5px; /* Optional: create space for the cursor */
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dotCarousel {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb; /* Default color for inactive dots */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dotCarousel.active-dot {
+  background-color: var(--gray);
+  box-shadow: var(--box-shadow);
 }

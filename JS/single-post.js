@@ -32,23 +32,6 @@ async function displayPost() {
     <span class="italic">"This post changed my life. I think every mom should read it."</span>
   <div><ion-icon id="star" name="star"></ion-icon><ion-icon id="star" name="star"></ion-icon><ion-icon id="star" name="star"></ion-icon><ion-icon id="star" name="star"></ion-icon><ion-icon id="star"name="star"></ion-icon></div></div>
     </div>`;
-
-    const postHomePageSection = document.getElementById("postHomePageSection");
-    const postHomePage = document.querySelector(".postHomePage");
-
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            postHomePage.classList.add("show");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(postHomePageSection);
   } catch (error) {
     showError("Failed to fetch posts. Please try again later.");
   }

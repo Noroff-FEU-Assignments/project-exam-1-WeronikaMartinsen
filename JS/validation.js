@@ -1,4 +1,5 @@
 const validation = document.querySelector(".validation");
+const myForm = document.getElementById("myForm");
 
 validation.innerHTML = `
 <div class="validationContainer">
@@ -26,7 +27,7 @@ validation.innerHTML = `
       <textarea class="contactInput messageInput" id="message" onkeyup="validateMessage()" name="message" rows="5" required></textarea>
       <span id="message-error"></span></div>
     <div class="form-group btn">
-      <button onclick="return validateForm()" type="submit" class="buttonSubmit">Send Message</button>
+      <button id="submitButton" onclick="return validateForm()" type="submit" class="buttonSubmit">Send Message</button>
       <span id="submit-error"></span></div>
 
   </form> 
@@ -131,7 +132,7 @@ function openOverlay() {
     <span>I will answer you as fast as It will be possible.</span>
     <a href="/html/blog.html" class="button-main spanOverlay">Go to posts</a>`;
 
-  // Append the overlay to the validation container or another container
+  // Append the overlay to the validation container
   const validationContainer = document.querySelector(".validationContainer");
   validationContainer.appendChild(overlay);
 }
@@ -143,3 +144,30 @@ function closeOverlay() {
   // Remove the overlay element from the DOM
   overlay.parentNode.removeChild(overlay);
 }
+function resetFormFields() {
+  nameError.innerHTML = "";
+  emailError.innerHTML = "";
+  subjectError.innerHTML = "";
+  messageError.innerHTML = "";
+  submitError.innerHTML = "";
+
+  // Clear the form fields
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("message").value = "";
+}
+
+// Function to reset the entire form
+function resetForm() {
+  resetFormFields();
+  // Additional logic for resetting other elements if needed
+}
+
+const submitButton = document.getElementById("submitButton");
+
+submitButton.addEventListener("click", async (event) => {
+  event.preventDefault();
+
+  resetForm();
+});

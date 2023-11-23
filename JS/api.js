@@ -64,7 +64,7 @@ export async function displayPosts() {
     const carousel = document.querySelector(".carousel");
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    const numVisiblePosts = 4;
+    const numVisiblePosts = 5;
     let currentSlide = 0;
 
     let touchStartX = 0;
@@ -94,6 +94,7 @@ export async function displayPosts() {
       if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {
         moveCarousel(1);
       }
+      toggleArrowButtons();
       updateCarouselView();
     });
 
@@ -101,8 +102,30 @@ export async function displayPosts() {
       if (currentSlide > 0) {
         moveCarousel(-1);
       }
+      toggleArrowButtons();
       updateCarouselView();
     });
+
+    function toggleArrowButtons() {
+      const arrow = document.getElementById("arrow");
+
+      // Disable next button if no more posts in the next direction
+      nextButton.disabled =
+        currentSlide >= Math.ceil(posts.length / numVisiblePosts) - 1;
+      nextButton.style.backgroundColor = nextButton.disabled
+        ? "white"
+        : "white";
+      arrow.style.color = nextButton.disabled ? "white" : "gray";
+
+      // Disable prev button if no more posts in the previous direction
+      prevButton.disabled = currentSlide <= 0;
+      prevButton.style.backgroundColor = prevButton.disabled
+        ? "white"
+        : "white";
+      arrow.style.color = prevButton.disabled ? "white" : "gray";
+
+      updateDots();
+    }
 
     function moveCarousel(direction) {
       currentSlide += direction;
@@ -111,6 +134,9 @@ export async function displayPosts() {
       } else if (currentSlide >= Math.ceil(posts.length / numVisiblePosts)) {
         currentSlide = Math.ceil(posts.length / numVisiblePosts) - 1;
       }
+      updateCarouselView();
+      toggleArrowButtons();
+      updateDots();
     }
 
     function updateCarouselView() {
@@ -119,6 +145,7 @@ export async function displayPosts() {
       const carouselCards = carousel.querySelectorAll(".carousel-card");
 
       carouselCards.forEach((card) => {
+        card.classList.remove("active-carousel"); // Remove active class from all cards
         card.style.display = "none";
       });
 
@@ -128,9 +155,37 @@ export async function displayPosts() {
         i++
       ) {
         carouselCards[i].style.display = "block";
+        carouselCards[i].classList.add("active-carousel"); // Add active class to the current card
       }
     }
 
+    const dotsContainer = document.querySelector(".carousel-dots");
+
+    function updateDots() {
+      dotsContainer.innerHTML = "";
+
+      for (let i = 0; i < Math.ceil(posts.length / numVisiblePosts); i++) {
+        const dot = document.createElement("div");
+        dot.className = "dotCarousel";
+        dot.addEventListener("click", () => {
+          currentSlide = i;
+          updateCarouselView();
+          toggleArrowButtons();
+          updateDots();
+        });
+        dotsContainer.appendChild(dot);
+      }
+
+      // Highlight the active dot
+      const activeDot = dotsContainer.querySelector(
+        `.dotCarousel:nth-child(${currentSlide + 1})`
+      );
+      if (activeDot) {
+        activeDot.classList.add("active-dot");
+      }
+    }
+
+    updateDots();
     updateCarouselView();
   } catch (error) {
     showError("Failed to fetch posts");

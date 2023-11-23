@@ -58,7 +58,6 @@ export async function filterPostsByCategory(categoryId) {
     hideLoadingIndicator();
   } catch (error) {
     showError("Failed to fetch posts");
-    hideLoadingIndicator();
   }
 }
 
@@ -107,7 +106,6 @@ export async function fetchAndDisplayPosts() {
     hideLoadingIndicator();
   } catch (error) {
     showError("Failed to fetch or process posts");
-    hideLoadingIndicator();
   }
 }
 

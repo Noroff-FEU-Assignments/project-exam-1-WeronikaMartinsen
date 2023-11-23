@@ -73,7 +73,7 @@
   cursor: pointer;
   text-align: center;
   padding: 0.4em 0.8em;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--lighter-pink);
   border-radius: var(--border-radius);
   margin: 0;
 }

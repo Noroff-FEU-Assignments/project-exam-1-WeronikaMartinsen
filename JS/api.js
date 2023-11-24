@@ -52,6 +52,7 @@ export async function displayPosts() {
 
       const postCard = document.createElement("div");
       postCard.className = "carousel-card";
+
       postCard.innerHTML = `      
       
       <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="imgHero" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
@@ -64,7 +65,7 @@ export async function displayPosts() {
     const carousel = document.querySelector(".carousel");
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    const numVisiblePosts = 5;
+    const numVisiblePosts = 3;
     let currentSlide = 0;
 
     let touchStartX = 0;
@@ -112,17 +113,15 @@ export async function displayPosts() {
       // Disable next button if no more posts in the next direction
       nextButton.disabled =
         currentSlide >= Math.ceil(posts.length / numVisiblePosts) - 1;
-      nextButton.style.backgroundColor = nextButton.disabled
-        ? "white"
-        : "white";
-      arrow.style.color = nextButton.disabled ? "white" : "gray";
+      nextButton.style.opacity = nextButton.disabled ? 0.5 : 1; // Set opacity to 1 instead of 2
 
       // Disable prev button if no more posts in the previous direction
       prevButton.disabled = currentSlide <= 0;
-      prevButton.style.backgroundColor = prevButton.disabled
-        ? "white"
-        : "white";
-      arrow.style.color = prevButton.disabled ? "white" : "gray";
+      prevButton.style.opacity = prevButton.disabled ? 0.5 : 1; // Set opacity to 1 instead of 2
+
+      // Set arrow color based on both conditions
+      arrow.style.color =
+        nextButton.disabled && prevButton.disabled ? "white" : "var(--gray)";
 
       updateDots();
     }
@@ -144,9 +143,20 @@ export async function displayPosts() {
       const endIndex = startIndex + numVisiblePosts;
       const carouselCards = carousel.querySelectorAll(".carousel-card");
 
-      carouselCards.forEach((card) => {
-        card.classList.remove("active-carousel"); // Remove active class from all cards
+      carouselCards.forEach((card, index) => {
+        card.classList.remove("active-carousel", "middle-carousel"); // Remove active and middle classes from all cards
         card.style.display = "none";
+
+        const middleIndex = index === Math.floor(numVisiblePosts / 2);
+
+        if (middleIndex) {
+          // Calculate the middle card index relative to the current slide
+          const middleCardIndex = startIndex + Math.floor(numVisiblePosts / 2);
+          if (middleCardIndex >= 0 && middleCardIndex < posts.length) {
+            // Check if the calculated middleCardIndex is within the valid range
+            card.classList.add("middle-carousel");
+          }
+        }
       });
 
       for (
@@ -155,7 +165,7 @@ export async function displayPosts() {
         i++
       ) {
         carouselCards[i].style.display = "block";
-        carouselCards[i].classList.add("active-carousel"); // Add active class to the current card
+        carouselCards[i].classList.add("active-carousel"); // Add active class to all cards
       }
     }
 

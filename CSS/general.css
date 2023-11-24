@@ -47,6 +47,7 @@ ul {
   text-align: left;
   list-style-type: none;
 }
+
 h1,
 h2 {
   font-weight: 500;
@@ -184,4 +185,9 @@ form {
 }
 .font-size {
   font-size: 1.3em;
+}
+
+.hero-image img {
+  width: 25em;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
 }

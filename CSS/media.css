@@ -52,9 +52,16 @@
   .contactInfo {
     flex-wrap: wrap;
   }
+  #validationLeftDiv {
+    font-size: 95%;
+  }
 }
 
 @media (max-width: 594px) {
+  #validationLeftDiv {
+    font-size: 90%;
+    flex-direction: column;
+  }
   .navContainer {
     justify-content: space-between;
   }

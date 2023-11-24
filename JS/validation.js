@@ -3,8 +3,12 @@ const myForm = document.getElementById("myForm");
 
 validation.innerHTML = `
 <div class="validationContainer">
-<h1>Contact Me Directly</h1>
+<div id="validationLeftDiv">
+<div><h1 class"h1-contact-size">Contact Me Directly</h1>
 <span class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</span>
+</div>
+<div class="hero-image"><img id="height"src="/images/contact.jpg" alt="Women at the beach feeling free."></div>
+</div>
 
 <form class="contact-form">
     <div class="form-group">

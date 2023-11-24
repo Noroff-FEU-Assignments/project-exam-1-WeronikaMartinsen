@@ -33,9 +33,23 @@
   margin-top: 11em;
   margin-bottom: 3em;
 }
+.validationContainer div {
+  display: flex;
+}
+.validationContainer div div {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+#validationLeftDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
 .contactSpan {
   font-size: 1.1em;
-  margin-top: 1em;
+
   max-width: 600px;
   text-align: center;
 }
@@ -106,4 +120,7 @@
 }
 .contact-color {
   color: white;
+}
+#height {
+  max-width: 10em;
 }

@@ -1,10 +1,19 @@
+import { animateText } from "./functions.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("animatedText");
+  const textContent = "Contact me directly!";
+
+  animateText(textElement, textContent);
+});
+
 const validation = document.querySelector(".validation");
 const myForm = document.getElementById("myForm");
 
 validation.innerHTML = `
 <div class="validationContainer">
 <div id="validationLeftDiv">
-<div><h1 class"h1-contact-size">Contact Me Directly</h1>
+<div><h1 id="animatedText" class"h1-contact-size">Contact Me Directly</h1>
 <span class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</span>
 </div>
 <div class="hero-image"><img id="height"src="/images/contact.jpg" alt="Women at the beach feeling free."></div>

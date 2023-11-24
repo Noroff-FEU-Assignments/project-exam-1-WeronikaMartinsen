@@ -2,9 +2,16 @@ import {
   showError,
   showLoadingIndicator,
   hideLoadingIndicator,
+  animateText,
 } from "./functions.js";
 
 import { getPosts, displayPosts } from "./api.js";
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("animatedText");
+  const textContent = "All posts";
+
+  animateText(textElement, textContent);
+});
 
 export async function filterPostsByCategory(categoryId) {
   showLoadingIndicator();

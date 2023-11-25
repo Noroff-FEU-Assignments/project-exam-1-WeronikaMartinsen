@@ -1,7 +1,10 @@
 .confirmation {
-  margin: 16em 0 10em 0;
+  margin: 16em 1em 10em 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.textAlign {
+  text-align: center;
 }

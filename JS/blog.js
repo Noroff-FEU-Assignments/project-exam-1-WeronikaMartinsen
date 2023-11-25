@@ -6,6 +6,7 @@ import {
 } from "./functions.js";
 
 import { getPosts, displayPosts } from "./api.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const textElement = document.getElementById("animatedText");
   const textContent = "All posts";

@@ -1,0 +1,7 @@
+.confirmation {
+  margin: 16em 0 10em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

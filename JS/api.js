@@ -110,18 +110,17 @@ export async function displayPosts() {
     function toggleArrowButtons() {
       const arrow = document.getElementById("arrow");
 
-      // Disable next button if no more posts in the next direction
-      nextButton.disabled =
-        currentSlide >= Math.ceil(posts.length / numVisiblePosts) - 1;
-      nextButton.style.opacity = nextButton.disabled ? 0.5 : 1; // Set opacity to 1 instead of 2
+      nextButton.style.display =
+        currentSlide >= Math.ceil(posts.length / numVisiblePosts) - 1
+          ? "none"
+          : "block";
+      prevButton.style.display = currentSlide <= 0 ? "none" : "block";
 
-      // Disable prev button if no more posts in the previous direction
-      prevButton.disabled = currentSlide <= 0;
-      prevButton.style.opacity = prevButton.disabled ? 0.5 : 1; // Set opacity to 1 instead of 2
-
-      // Set arrow color based on both conditions
       arrow.style.color =
-        nextButton.disabled && prevButton.disabled ? "white" : "var(--gray)";
+        nextButton.style.display === "none" &&
+        prevButton.style.display === "none"
+          ? "white"
+          : "var(--gray)";
 
       updateDots();
     }

@@ -1,23 +1,9 @@
-import { animateText } from "./functions.js";
-
-document.addEventListener("DOMContentLoaded", function () {
-  const textElement = document.getElementById("animatedText");
-  const textContent = "Contact me directly!";
-
-  animateText(textElement, textContent);
-});
-
 const validation = document.querySelector(".validation");
-const myForm = document.getElementById("myForm");
 
 validation.innerHTML = `
 <div class="validationContainer">
-<div id="validationLeftDiv">
-<div><h1 id="animatedText" class"h1-contact-size">Contact Me Directly</h1>
+<h1>Contact Me</h1>
 <span class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</span>
-</div>
-<div class="hero-image"><img id="height"src="/images/contact.jpg" alt="Women at the beach feeling free."></div>
-</div>
 
 <form class="contact-form">
     <div class="form-group">
@@ -40,7 +26,7 @@ validation.innerHTML = `
       <textarea class="contactInput messageInput" id="message" onkeyup="validateMessage()" name="message" rows="5" required></textarea>
       <span id="message-error"></span></div>
     <div class="form-group btn">
-      <button id="submitButton" onclick="return validateForm()" type="submit" class="buttonSubmit">Send Message</button>
+      <button onclick="return validateForm()" type="submit" class="buttonSubmit">Send Message</button>
       <span id="submit-error"></span></div>
 
   </form> 
@@ -128,59 +114,46 @@ function validateForm() {
     !validateMessage()
   ) {
     submitError.style.display = "block";
-    submitError.innerHTML = "Please fix error to submit.";
-    setTimeout(function () {
-      submitError.style.display = "none";
-    }, 3000);
-    return false;
+    submitError.innerHTML = "Please fix errors to submit.";
+    return false; // Return false when there are validation errors
   } else {
-    openOverlay();
-    return false;
+    submitError.style.display = "none";
+    window.location.href = "/html/confirmation.html";
+    return true; // Return true when there are no validation errors
   }
 }
-function openOverlay() {
+
+const submitButton = document.querySelector(".buttonSubmit");
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  validateForm();
+});
+
+/* function openOverlay() {
   const overlay = document.createElement("div");
   overlay.classList.add("overlayMessage");
-  overlay.innerHTML = `<ion-icon class="closeIcon" name="close-outline" onclick="closeOverlay()"></ion-icon><h3 class="contact-color">Thank you for contacting me!</h3>
-    <span>I will answer you as fast as It will be possible.</span>
+  overlay.innerHTML = `<button class="closeIcon"><ion-icon name="close-outline"></ion-icon></button><h3>Thank you for contacting me!</h3>
+    <span>I will answer you as fast as it will be possible.</span>
     <a href="/html/blog.html" class="button-main spanOverlay">Go to posts</a>`;
 
-  // Append the overlay to the validation container
-  const validationContainer = document.querySelector(".validationContainer");
   validationContainer.appendChild(overlay);
-}
 
-function closeOverlay() {
+  const closeIcon = overlay.querySelector(".closeIcon");
+  closeIcon.addEventListener("click", closeOverlay);
+}
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (validateForm()) {
+    openOverlay();
+  } else {
+    errors.submit.style.display = "block";
+    errors.submit.innerHTML = "Please fix errors to submit.";
+  }
+});
+ */
+/* function closeOverlay() {
   const overlay = document.querySelector(".overlayMessage");
   overlay.style.display = "none";
-
-  // Remove the overlay element from the DOM
-  overlay.parentNode.removeChild(overlay);
 }
-function resetFormFields() {
-  nameError.innerHTML = "";
-  emailError.innerHTML = "";
-  subjectError.innerHTML = "";
-  messageError.innerHTML = "";
-  submitError.innerHTML = "";
-
-  // Clear the form fields
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("subject").value = "";
-  document.getElementById("message").value = "";
-}
-
-// Function to reset the entire form
-function resetForm() {
-  resetFormFields();
-  // Additional logic for resetting other elements if needed
-}
-
-const submitButton = document.getElementById("submitButton");
-
-submitButton.addEventListener("click", async (event) => {
-  event.preventDefault();
-
-  resetForm();
-});
+ */

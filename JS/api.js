@@ -143,19 +143,8 @@ export async function displayPosts() {
       const carouselCards = carousel.querySelectorAll(".carousel-card");
 
       carouselCards.forEach((card, index) => {
-        card.classList.remove("active-carousel", "middle-carousel"); // Remove active and middle classes from all cards
+        card.classList.remove("active-carousel"); // Remove active and middle classes from all cards
         card.style.display = "none";
-
-        const middleIndex = index === Math.floor(numVisiblePosts / 2);
-
-        if (middleIndex) {
-          // Calculate the middle card index relative to the current slide
-          const middleCardIndex = startIndex + Math.floor(numVisiblePosts / 2);
-          if (middleCardIndex >= 0 && middleCardIndex < posts.length) {
-            // Check if the calculated middleCardIndex is within the valid range
-            card.classList.add("middle-carousel");
-          }
-        }
       });
 
       for (

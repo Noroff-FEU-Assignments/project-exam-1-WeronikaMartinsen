@@ -1,8 +1,17 @@
+import { animateText } from "./functions.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("animateTextContact");
+  const textContent = "Contact me";
+
+  animateText(textElement, textContent);
+});
+
 const validation = document.querySelector(".validation");
 
 validation.innerHTML = `
 <div class="validationContainer">
-<h1>Contact Me</h1>
+<h1 id="animateTextContact">Contact Me</h1>
 <span class="contactSpan">Feel free to reach out to me if you have any questions, inquiries, or feedback. I would love to hear from you!</span>
 
 <form class="contact-form">

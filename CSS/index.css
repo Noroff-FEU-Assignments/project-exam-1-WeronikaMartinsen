@@ -36,7 +36,7 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
 }
-.middle-carousel,
+
 .carousel-card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
@@ -157,8 +157,7 @@
   background-color: var(--gray);
   box-shadow: var(--box-shadow);
 }
-.carousel-card.middle-carousel {
-  /* Your distinctive styling for the middle card */
-  border: 2px solid white; /* For example, a border */
+.carousel-card {
+  border: 2px solid white;
   transform: scale(1.1);
 }

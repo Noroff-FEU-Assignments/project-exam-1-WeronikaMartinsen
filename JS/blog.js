@@ -8,7 +8,7 @@ import {
 import { getPosts, displayPosts } from "./api.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const textElement = document.getElementById("animatedText");
+  const textElement = document.getElementById("animatedTextBlog");
   const textContent = "All posts";
 
   animateText(textElement, textContent);

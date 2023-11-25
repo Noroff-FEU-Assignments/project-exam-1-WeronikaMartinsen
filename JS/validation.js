@@ -129,31 +129,3 @@ submitButton.addEventListener("click", function (event) {
   event.preventDefault();
   validateForm();
 });
-
-/* function openOverlay() {
-  const overlay = document.createElement("div");
-  overlay.classList.add("overlayMessage");
-  overlay.innerHTML = `<button class="closeIcon"><ion-icon name="close-outline"></ion-icon></button><h3>Thank you for contacting me!</h3>
-    <span>I will answer you as fast as it will be possible.</span>
-    <a href="/html/blog.html" class="button-main spanOverlay">Go to posts</a>`;
-
-  validationContainer.appendChild(overlay);
-
-  const closeIcon = overlay.querySelector(".closeIcon");
-  closeIcon.addEventListener("click", closeOverlay);
-}
-submitButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  if (validateForm()) {
-    openOverlay();
-  } else {
-    errors.submit.style.display = "block";
-    errors.submit.innerHTML = "Please fix errors to submit.";
-  }
-});
- */
-/* function closeOverlay() {
-  const overlay = document.querySelector(".overlayMessage");
-  overlay.style.display = "none";
-}
- */

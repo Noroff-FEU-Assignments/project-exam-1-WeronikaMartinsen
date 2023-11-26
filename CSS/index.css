@@ -58,7 +58,8 @@
 }
 .heroText {
   max-width: 60em;
-  margin-bottom: 2em;
+  width: 100%;
+  margin: 0 1em 2em 1em;
   text-align: center;
 }
 .slide-arrow {
@@ -122,13 +123,15 @@
   max-width: 700px;
   margin: 0 1em 0 1em;
   text-align: center;
+  width: 100%;
 }
 
 .noMargin {
   margin-bottom: 0.3em;
 }
 .marginBottom {
-  margin-bottom: 0.5em;
+  margin: 0 1em 0.4em 1em;
+  width: 100%;
   text-align: center;
 }
 #animatedText {

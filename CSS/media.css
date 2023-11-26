@@ -58,6 +58,11 @@
 }
 
 @media (max-width: 594px) {
+  .heroText {
+    font-size: 0.9em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
   #validationLeftDiv {
     font-size: 90%;
     flex-direction: column;

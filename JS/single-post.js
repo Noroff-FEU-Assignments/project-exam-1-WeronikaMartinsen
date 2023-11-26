@@ -7,17 +7,22 @@ import {
 const singlePostUrl = "https://www.rainy-days.no/?rest_route=/wp/v2/posts/82";
 
 async function getPost() {
-  showLoadingIndicator();
-  const response = await fetch(singlePostUrl);
-  const result = await response.json();
-  if (response.ok) {
-    hideLoadingIndicator();
-    return result;
-  } else {
-    throw new Error("Fail to fetch");
+  try {
+    const response = await fetch(singlePostUrl);
+    const result = await response.json();
+    if (response.ok) {
+      hideLoadingIndicator();
+      return result;
+    } else {
+      throw new Error("Fail to fetch");
+    }
+  } catch {
+    showError("Fail to fetch post!");
+    throw error;
   }
 }
 async function displayPost() {
+  showLoadingIndicator();
   try {
     const post = await getPost();
     const singlePostContainer = document.querySelector(".singlePost");

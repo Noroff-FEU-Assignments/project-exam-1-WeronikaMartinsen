@@ -53,6 +53,11 @@ const subjectError = document.getElementById("subject-error");
 const messageError = document.getElementById("message-error");
 const submitError = document.getElementById("submit-error");
 
+document.getElementById("name").addEventListener("keyup", validateName);
+document.getElementById("email").addEventListener("keyup", validateEmail);
+document.getElementById("subject").addEventListener("keyup", validateSubject);
+document.getElementById("message").addEventListener("keyup", validateMessage);
+
 function validateName() {
   const name = document.getElementById("name").value;
   const required = 5;

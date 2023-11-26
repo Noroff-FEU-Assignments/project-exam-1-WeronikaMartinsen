@@ -16,23 +16,19 @@ const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";
 
 export async function getPosts() {
   showLoadingIndicator();
-  const response = await fetch(url);
-  const result = await response.json();
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
 
-  if (response.ok) {
-    hideLoadingIndicator();
-    return result;
-  } else {
-    throw new Error("Failed to fetch!");
+    if (response.ok) {
+      hideLoadingIndicator();
+      return result;
+    }
+  } catch {
+    showError("Failed to fetch post");
+    throw error;
   }
 }
-
-export async function getPost() {
-  const response = await fetch(singlePostId);
-  const result = await response.json();
-  return result;
-}
-
 export async function displayPosts() {
   try {
     const posts = await getPosts();

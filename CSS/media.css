@@ -31,9 +31,6 @@
   .hero-section {
     flex-direction: column-reverse;
     gap: 0;
-    padding: 0;
-    padding-top: 1em;
-    margin-bottom: 3em;
   }
   .hero-image img {
     max-width: 80%;
@@ -60,8 +57,6 @@
 @media (max-width: 594px) {
   .heroText {
     font-size: 0.9em;
-    margin-left: 1em;
-    margin-right: 1em;
   }
   #validationLeftDiv {
     font-size: 90%;

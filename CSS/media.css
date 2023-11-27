@@ -51,6 +51,9 @@
   #validationLeftDiv {
     font-size: 95%;
   }
+  .dotCarousel {
+    display: none;
+  }
 }
 
 @media (max-width: 594px) {

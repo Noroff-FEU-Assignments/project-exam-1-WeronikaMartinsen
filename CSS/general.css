@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
   color: var(--gray);
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin-top: 7em;
 }

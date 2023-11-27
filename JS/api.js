@@ -61,7 +61,15 @@ export async function displayPosts() {
     const carousel = document.querySelector(".carousel");
     const prevButton = document.getElementById("slide-arrow-prev");
     const nextButton = document.getElementById("slide-arrow-next");
-    const numVisiblePosts = 3;
+    let numVisiblePosts;
+
+    // Check screen width and set numVisiblePosts accordingly
+    if (window.innerWidth <= 500) {
+      numVisiblePosts = 1;
+    } else {
+      numVisiblePosts = 4;
+    }
+
     let currentSlide = 0;
 
     let touchStartX = 0;

@@ -27,17 +27,22 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
- <!-- Hotjar Tracking Code for About me -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3729050,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <!-- Hotjar Tracking Code for About me -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3729050, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <script defer src="/js/navbar.js"></script>
     <script defer src="/js/footer.js"></script>
     <script defer type="module" src="/js/functions.js"></script>
@@ -47,53 +52,133 @@
     <nav>
       <div class="navbar"></div>
     </nav>
-    <section>
-      <div class="about hero-image">
-        <img
-          src="/images/myPicture.jpg"
-          alt="Picture of me - Weronika Martinsen."
-        />
+    <main>
+      <div class="hero-about">
+        <div class="aboutText">
+          <h1 id="animateTextAbout">So, who am I?</h1>
+          <div class="hero-image">
+            <img
+              src="/images/myPicture.jpg"
+              alt="Picture of me - Weronika Martinsen."
+            />
+          </div>
+          <ul class="about-ul">
+            <li>
+              <span>Professional Juggler:</span> I've mastered the art of
+              juggling between web development, parenting, and avoiding Lego
+              pieces on the floor. It's a skill, really.
+            </li>
+            <li>
+              <span>Code Whisperer:</span> I speak fluent HTML, CSS, and
+              JavaScript. My coding conversations are so engaging; even my
+              coffee mug is a good listener.
+            </li>
 
-        <h1 id="animateTextAbout">So, who am I?</h1>
-        <p class="about-text">
-          <p class="about-text">  My name is Weronika Martinsen, the face behind this digital space. I'm
-            passionate about Front-end development, and I created this blog as a
-            platform to share my knowledge, experiences, and insights in this
-            exciting field.</p>
-            <p class="about-text">As an avid enthusiast, I've spent countless hours
-              exploring, learning and growing in this powerful environment. My goal
-              is to bring you informative, engaging, and valuable content that can
-              help you learn, grow, inspire.</p>
-              <p class="about-text">When I'm not immersed in the world of
-                web, you can find me cooking, reading, exercising and of course
-                parenting. These diverse interests and experiences allow me to bring a
-                unique perspective to my writing and connect with a broad audience. I
-                believe in the power of connection, and I'm excited to have you join
-                me on this journey. Whether you're a fellow enthusiast or just curious
-                about the subject, there's something here for you.</p>
-                <p class="about-text">I hope you find
-                  inspiration, knowledge, and a sense of community within these pages.
-                  </p>
-           <p class="about-text">Thank you for visiting my blog. I can't wait to embark on this
-            adventure with you! Feel free to reach out to me or connect with me
-            on. Let's learn, grow, and share together!</p>
-        </p>
+            <li>
+              <span>Parenting Prodigy:</span> I can resolve sibling conflicts
+              with the finesse of debugging code. Timeout is my preferred
+              method, both in parenting and in programming.
+            </li>
+
+            <li>
+              <span>Recipe Wizard:</span> I turn random ingredients into gourmet
+              meals, and occasionally, I even surprise myself. My kitchen is my
+              laboratory, and the apron is my superhero cape.
+            </li>
+
+            <li>
+              <span>Book Ninja:</span> I can finish a novel before you finish
+              reading this sentence. Reading is my superpower, and libraries
+              fear my overdue fines.
+            </li>
+
+            <li>
+              <span>Lego Safecracker:</span> Stepping on a Lego? Child's play.
+              I've developed a sixth sense to avoid them. Mission: "Operation
+              Barefoot" accomplished.
+            </li>
+
+            <li>
+              <span>Fitness Fanatic:</span> I break a sweat in the gym and break
+              code bugs at my desk. My exercise routine involves lifting weights
+              and occasionally lifting my kids.
+            </li>
+
+            <li>
+              <span>Parenthood Guru:</span> Navigating parenthood is like
+              debugging a complex program. I've got strategies, backup plans,
+              and a stash of chocolate for emergencies.
+            </li>
+
+            <li>
+              <span>Techie Parent Extraordinaire:</span> I'm the mom who knows
+              her way around gadgets better than the kids. Passwords, settings,
+              you name it—I've got it covered.
+            </li>
+
+            <li>
+              <span>Blog Explorer:</span> Charting the unexplored territories of
+              the internet, one blog post at a time. Join me on this thrilling
+              expedition into the world of bytes, bits, and bedtime stories!
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <div class="better">
+      <h2>Do you want to know me better?</h2>
+      <span>All I love, All I do for living</span>
+    </div>
+    <section class="galleryContainer">
+      <div class="gallery">
+        <div class="imgBox">
+          <img class="imageGallery" src="/images/see.jpg" alt="See." /><span
+            >TRAVEL</span
+          >
+        </div>
+        <div class="imgBox">
+          <img class="imageGallery" src="/images/book.jpg" alt="Book." /><span
+            >BOOK</span
+          >
+        </div>
+        <div class="imgBox">
+          <img
+            class="imageGallery"
+            src="/images/family.jpg"
+            alt="Family time."
+          /><span>FAMILY</span>
+        </div>
+        <div class="imgBox">
+          <img class="imageGallery" src="/images/food.jpg" alt="Food." /><span
+            >FOOD</span
+          >
+        </div>
+        <div class="imgBox">
+          <img
+            class="imageGallery"
+            src="/images/image1.png"
+            alt="Exercising."
+          /><span>EXERCISE</span>
+        </div>
+        <div class="imgBox">
+          <img class="imageGallery" src="/images/music.jpg" alt="Music." /><span
+            >MUSIC</span
+          >
+        </div>
+        <div class="imgBox">
+          <img class="imageGallery" src="/images/ski.jpg" alt="Skiing." /><span
+            >SKI</span
+          >
+        </div>
+        <div class="imgBox">
+          <img
+            class="imageGallery"
+            src="/images/code.jpg"
+            alt="Laptop - coding."
+          /><span>CODE</span>
+        </div>
       </div>
     </section>
-    <div class="better">      
-      <h2>Do you want to know me better?</h2>
-      <span>All I love, All I do for living</span></div>
-    <section class="galleryContainer">
-    <div class="gallery">
-      <div class="imgBox"><img class="imageGallery" src="/images/see.jpg" alt="See."><span>TRAVEL</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/book.jpg" alt="Book."><span>BOOK</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/family.jpg" alt="Family time."><span>FAMILY</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/food.jpg" alt="Food."><span>FOOD</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/image1.png" alt="Exercising."><span>EXERCISE</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/music.jpg" alt="Music."><span>MUSIC</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/ski.jpg" alt="Skiing."><span>SKI</span></div>
-      <div class="imgBox"><img class="imageGallery" src="/images/code.jpg" alt="Laptop - coding."><span>CODE</span></div>
-     </div></section>
     <div class="footer"></div>
   </body>
 </html>

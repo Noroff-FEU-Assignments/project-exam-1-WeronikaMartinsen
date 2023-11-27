@@ -1,4 +1,5 @@
 .singlePost,
+.singlePost2,
 .postHomePage,
 .postHomePage a,
 .postHomePage span,
@@ -7,8 +8,10 @@
   justify-content: center;
   align-items: center;
 }
+
 .postHomePage {
   height: 25em;
+  max-width: 1100px;
   width: 80%;
   gap: 1em;
   padding: 1em;
@@ -16,7 +19,10 @@
   border-radius: var(--border-radius);
   background-color: white;
   margin-top: 1em;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2em;
 }
+
 .postHomePage.show {
   opacity: 1;
   transform: translateY(0);
@@ -28,11 +34,13 @@
 .postHomePage img {
   width: 25em;
 }
-.sectionColor {
+.sectionSinglePost {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 2em;
   margin-top: 4em;
-  border-top: 2px solid var(--lighter-gray);
+  background-color: var(--lighter-pink);
 }
 .secondBox {
   flex-direction: column;
@@ -45,4 +53,8 @@
   margin: 1em 0 0 0.2em;
   font-size: 1.5em;
   color: var(--gray);
+}
+.postHomePage2 {
+  display: flex;
+  flex-direction: row-reverse;
 }

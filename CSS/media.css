@@ -2,13 +2,14 @@
   .postHomePage {
     flex-direction: column;
     width: 100%;
+    max-width: 1000px;
     height: max-content;
-  }
-  .postHomePage img {
-    width: 100%;
   }
   .secondBox {
     padding: 0.3em;
+  }
+  .hero-image img {
+    max-width: 100%;
   }
 }
 @media (max-width: 785px) {
@@ -32,9 +33,7 @@
     flex-direction: column-reverse;
     gap: 0;
   }
-  .hero-image img {
-    max-width: 80%;
-  }
+
   .hero-box {
     max-width: 600px;
   }
@@ -55,6 +54,12 @@
 }
 
 @media (max-width: 594px) {
+  #animatedText {
+    font-size: 1.5em;
+  }
+  .carousel-card {
+    width: 100%;
+  }
   .heroText {
     font-size: 0.9em;
   }
@@ -88,6 +93,9 @@
   }
   .linkList {
     padding: 0;
+  }
+  .postHomePage img {
+    width: 90%;
   }
 
   .active {

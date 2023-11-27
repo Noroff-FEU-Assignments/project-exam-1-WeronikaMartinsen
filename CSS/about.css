@@ -1,16 +1,27 @@
-.about {
+.hero-about {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1em;
-  margin-top: 11em;
-  margin-bottom: 3em;
+  flex-direction: column;
+  margin: 11em 1em 3em 1em;
+  gap: 2em;
+  padding: 0;
+}
+.aboutText {
+  max-width: 1000px;
+}
+.about-ul {
+  padding: 0;
 }
 
-.about-text {
-  margin: 0 1em 0 1em;
-  max-width: 800px;
+.hero-about ul li {
+  margin-bottom: 1em;
+  font-size: 1em;
+  text-align: center;
+}
+.hero-about ul li span {
+  font-weight: 700;
+  color: var(--gray);
 }
 .gallery {
   display: grid;
@@ -60,4 +71,16 @@
 }
 .better span {
   font-style: italic;
+}
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.hero-image img {
+  width: 15em;
+}
+.hero-image img:hover {
+  scale: 1.01;
 }

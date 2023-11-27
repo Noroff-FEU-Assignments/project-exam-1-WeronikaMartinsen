@@ -35,7 +35,8 @@ body {
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 p,
-span {
+span,
+li {
   margin: 0;
   padding: 0;
   max-width: 800px;
@@ -187,10 +188,17 @@ form {
   font-size: 0.8em;
 }
 .font-size {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 .hero-image img {
   width: 25em;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
+}
+.colorWhite {
+  color: var(--gray);
+}
+.textAlign {
+  text-align: center;
+  padding-bottom: 0.4em;
 }

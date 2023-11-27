@@ -7,6 +7,19 @@ import {
 
 import { getPosts } from "./api.js";
 
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("animateTextBlog");
+  if (textElement) {
+    const textContent = "All posts";
+    animateText(textElement, textContent);
+  } else {
+    console.error("Element with ID 'animateTextBlog' not found");
+  }
+  const textContent = "All posts";
+
+  animateText(textElement, textContent);
+});
+
 export async function filterPostsByCategory(categoryId) {
   showLoadingIndicator();
   try {

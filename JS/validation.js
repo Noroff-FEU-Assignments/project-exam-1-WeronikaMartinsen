@@ -17,25 +17,25 @@ validation.innerHTML = `
 <form class="contact-form">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input class="contactInput nameInput" type="text" id="name" onkeyup="validateName()" name="name" pattern=".{6,}" required>
+      <input class="contactInput nameInput" type="text" id="name" name="name" pattern=".{6,}" required>
       <span id="name-error"></span>
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input class="contactInput emailInput" type="email" id="email" onkeyup="validateEmail()" name="email" required>
+      <input class="contactInput emailInput" type="email" id="email" name="email" required>
       <span id="email-error"></span>
       </div>
     <div class="form-group">
       <label for="subject">Subject:</label>
-      <input class="contactInput subjectInput" id="subject" onkeyup="validateSubject()" name="subject" required></input>
+      <input class="contactInput subjectInput" id="subject" name="subject" required></input>
       <span id="subject-error"></span>
       </div>
     <div class="form-group">
       <label for="message">Message:</label>
-      <textarea class="contactInput messageInput" id="message" onkeyup="validateMessage()" name="message" rows="5" required></textarea>
+      <textarea class="contactInput messageInput" id="message" name="message" rows="5" required></textarea>
       <span id="message-error"></span></div>
     <div class="form-group btn">
-      <button onclick="return validateForm()" type="submit" class="buttonSubmit">Send Message</button>
+      <button type="submit" class="buttonSubmit">Send Message</button>
       <span id="submit-error"></span></div>
 
   </form> 
@@ -53,12 +53,8 @@ const subjectError = document.getElementById("subject-error");
 const messageError = document.getElementById("message-error");
 const submitError = document.getElementById("submit-error");
 
-document.getElementById("name").addEventListener("keyup", validateName);
-document.getElementById("email").addEventListener("keyup", validateEmail);
-document.getElementById("subject").addEventListener("keyup", validateSubject);
-document.getElementById("message").addEventListener("keyup", validateMessage);
-
 function validateName() {
+  console.log("Validating name...");
   const name = document.getElementById("name").value;
   const required = 5;
   const left = required - name.length;
@@ -136,6 +132,11 @@ function validateForm() {
     return true; // Return true when there are no validation errors
   }
 }
+
+document.getElementById("name").addEventListener("keyup", validateName);
+document.getElementById("email").addEventListener("keyup", validateEmail);
+document.getElementById("subject").addEventListener("keyup", validateSubject);
+document.getElementById("message").addEventListener("keyup", validateMessage);
 
 const submitButton = document.querySelector(".buttonSubmit");
 

@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
 }
+.singlePost {
+  width: 100%;
+  margin: 1em;
+}
 
 .postHomePage {
   height: 25em;

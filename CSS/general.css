@@ -94,13 +94,14 @@ button {
   background-color: var(--pink);
   color: white;
   margin-left: auto;
-  font-family: "Roboto", sans-serif;
 }
 .btnCTA:hover,
 .btnCTA:active,
 .button-main:hover,
 .button-main:active {
   box-shadow: var(--box-shadow);
+  background-color: var(--lighter-gray);
+  color: var(--gray);
 }
 
 .sizeBtn {

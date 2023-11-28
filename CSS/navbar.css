@@ -54,11 +54,15 @@
 .btn-nav {
   font-weight: 600;
   padding: 0.4em;
-  box-shadow: var(--box-shadow);
+  background-color: var(--pink);
+}
+#navLinkColor {
   color: white;
 }
 
 .btn-nav:hover,
 .btn-nav:active {
   transition: opacity 0.3s ease;
+  box-shadow: var(--box-shadow);
+  background-color: var(--light-pink);
 }

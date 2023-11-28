@@ -86,6 +86,7 @@
   background-color: var(--gray);
   color: white;
   border-radius: 10px;
+  font-family: "Roboto", sans-serif;
 }
 .overlayMessage {
   display: flex;

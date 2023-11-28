@@ -9,7 +9,6 @@
   align-items: center;
 }
 .singlePost {
-  width: 100%;
   margin: 1em;
 }
 
@@ -43,7 +42,7 @@
   flex-direction: column;
   text-align: center;
   padding: 2em;
-  margin-top: 4em;
+  margin-top: 3em;
   background-color: white;
 }
 .secondBox {

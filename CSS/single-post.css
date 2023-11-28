@@ -40,7 +40,7 @@
   text-align: center;
   padding: 2em;
   margin-top: 4em;
-  background-color: var(--lighter-pink);
+  background-color: white;
 }
 .secondBox {
   flex-direction: column;

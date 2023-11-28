@@ -4,8 +4,8 @@ footer.innerHTML = `<div class="footerContainer">
 <div class="footerBox footer-gap">
 
 <ion-icon id="footerIcon" name="logo-instagram"></ion-icon>
-<a href="https://www.linkedin.com/in/weronika-martinsen-a655a1246/"><ion-icon id="footerIcon" name="logo-linkedin"></ion-icon></a>
-<a href="https://github.com/WeronikaMartinsen?tab=repositories"><ion-icon id="footerIcon" name="logo-github"></ion-icon></a>
+<a class="visibility" href="https://www.linkedin.com/in/weronika-martinsen-a655a1246/"><ion-icon id="footerIcon" name="logo-linkedin">Linkedin</ion-icon></a>
+<a class="visibility" href="https://github.com/WeronikaMartinsen?tab=repositories"><ion-icon id="footerIcon" name="logo-github">Github</ion-icon></a>
 
 </div>
 <h3>My projects:</h3>

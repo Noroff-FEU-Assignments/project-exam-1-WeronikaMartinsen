@@ -67,7 +67,7 @@ export async function displayPosts() {
     if (window.innerWidth <= 500) {
       numVisiblePosts = 1;
     } else {
-      numVisiblePosts = 4;
+      numVisiblePosts = 3;
     }
 
     let currentSlide = 0;

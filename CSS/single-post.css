@@ -43,7 +43,7 @@
   text-align: center;
   padding: 2em;
   margin-top: 3em;
-  background-color: white;
+  background-color: var(--lighter-pink);
 }
 .secondBox {
   flex-direction: column;

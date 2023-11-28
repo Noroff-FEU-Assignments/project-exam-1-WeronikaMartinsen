@@ -110,9 +110,10 @@
   color: var(--gray);
   text-align: center;
   gap: 1em;
-  width: 85%;
+  width: 100%;
   margin: 1em;
   padding: 5em 1em 4em 1em;
+  width: 90%;
 }
 .hero-box {
   display: flex;

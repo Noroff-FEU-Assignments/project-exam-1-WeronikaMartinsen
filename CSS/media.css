@@ -12,6 +12,12 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 963px) {
+  .heroText {
+    gap: 0;
+  }
+}
 @media (max-width: 785px) {
   .logoImg {
     width: 12em;

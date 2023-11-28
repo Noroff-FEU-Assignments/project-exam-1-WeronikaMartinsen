@@ -86,7 +86,7 @@ async function displayPost2() {
       </div>
       <div class="secondBox">
         <span>${post.excerpt.rendered}</span>
-        <span class="italic">"This post changed my life. I think every mom should read it."</span>
+        <span class="italic">"Very good guide post!"</span>
         <div>
           <ion-icon id="star" name="star"></ion-icon>
           <ion-icon id="star" name="star"></ion-icon>

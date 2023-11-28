@@ -6,12 +6,12 @@
   margin: 11em 1em 3em 1em;
   gap: 2em;
   padding: 0;
+  flex-wrap: wrap;
 }
-.aboutText {
-  max-width: 1000px;
-}
+
 .about-ul {
   padding: 0;
+  max-width: 450px;
 }
 
 .hero-about ul li {
@@ -74,13 +74,22 @@
 }
 .hero-image {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 1em;
+  max-width: 400px;
 }
 .hero-image img {
-  width: 15em;
+  width: 80%;
 }
 .hero-image img:hover {
   scale: 1.01;
+}
+.heroText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
 }

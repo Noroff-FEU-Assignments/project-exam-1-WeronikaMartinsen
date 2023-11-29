@@ -11,6 +11,9 @@
   .hero-image img {
     max-width: 100%;
   }
+  .posts {
+    width: 80%;
+  }
 }
 
 @media (max-width: 963px) {
@@ -59,6 +62,9 @@
   }
   .dotCarousel {
     display: none;
+  }
+  #load-more {
+    width: 70%;
   }
 }
 

@@ -10,11 +10,19 @@ const categoriesLink = "https://www.rainy-days.no/wp-json/wp/v2/categories";
 
 async function getCategories() {
   showLoadingIndicator();
-  const response = await fetch(categoriesLink);
-  const result = await response.json();
-  if (response.ok) {
+  try {
+    const response = await fetch(categoriesLink);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch categories. Status: ${response.status}`);
+    }
+
+    const result = await response.json();
     hideLoadingIndicator();
     return result;
+  } catch (error) {
+    hideLoadingIndicator();
+    showError("Failed to fetch posts");
   }
 }
 

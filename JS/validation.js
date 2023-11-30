@@ -54,7 +54,6 @@ const messageError = document.getElementById("message-error");
 const submitError = document.getElementById("submit-error");
 
 function validateName() {
-  console.log("Validating name...");
   const name = document.getElementById("name").value;
   const required = 5;
   const left = required - name.length;

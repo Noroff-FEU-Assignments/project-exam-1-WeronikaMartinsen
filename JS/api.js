@@ -38,7 +38,6 @@ export async function displayPosts() {
     carouselContainer.innerHTML = "";
 
     posts.forEach((post) => {
-      console.log(post);
       let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
         "en-US",
         {

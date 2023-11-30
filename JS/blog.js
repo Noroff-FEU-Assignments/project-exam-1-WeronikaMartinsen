@@ -62,7 +62,6 @@ function displayPosts(postsToDisplay) {
     if (!displayedPostIds.includes(post.id)) {
       createCard(post, postContainer);
       displayedPostIds.push(post.id);
-      console.log("Displayed Post IDs:", displayedPostIds);
     }
   });
 }

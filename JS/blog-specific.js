@@ -20,7 +20,6 @@ async function fetchPosts() {
   const postId = getPostIdFromQuery();
   const title = getPostTitleFromQuery();
   if (!postId) {
-    console.log(postId);
     throw new Error(`API loading failed. ID not found in the query parameter.`);
   }
 
@@ -31,7 +30,6 @@ async function fetchPosts() {
     hideLoadingIndicator();
     const singlePost = await response.json();
     if (!response.ok) {
-      console.error("Failed to fetch the single post.");
       throw new Error("Fetch jacket with ID failed.");
     }
     const titleContainer = document.getElementById("title");
@@ -52,7 +50,6 @@ function createHtml(post) {
     }
   );
 
-  console.log(post);
   const postContainer = document.querySelector(".postContainer");
   postContainer.innerHTML = `
   <h2 class="titleDecoration widthH1 maxWidth">${post.title.rendered}</h2><span class="biggerDate">${formattedDate}</span>
@@ -77,7 +74,6 @@ function createHtml(post) {
 
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("close")) {
-      console.log("Close button clicked!");
       modal.classList.remove("appear");
     }
   });

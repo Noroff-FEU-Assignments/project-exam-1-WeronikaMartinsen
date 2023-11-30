@@ -73,7 +73,6 @@ async function displayPost2() {
   showLoadingIndicator();
   try {
     const post = await getPost2();
-    console.log(post);
     const singlePostContainer2 = document.querySelector(".singlePost2");
 
     singlePostContainer2.innerHTML = "";

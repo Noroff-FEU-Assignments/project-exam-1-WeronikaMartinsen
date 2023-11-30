@@ -30,7 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
   margin-bottom: 3em;
 }
 .validationContainer div {
@@ -66,7 +65,7 @@
 }
 .contactInput {
   width: 100%;
-  border: 1px solid var(--lighter-gray);
+  border: 1px solid var(--lighter-pink);
   border-radius: 10px;
 }
 .contactInput:focus {

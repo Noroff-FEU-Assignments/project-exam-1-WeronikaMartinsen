@@ -76,7 +76,8 @@
 .categoryList ul:active {
   background-color: var(--pink);
   color: white;
-  box-shadow: var(--box-shadow);
+  border: 1px solid var(--pink);
+  box-shadow: var(--pink);
 }
 
 .card-actions {

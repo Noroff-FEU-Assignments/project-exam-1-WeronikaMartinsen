@@ -52,8 +52,8 @@ export async function displayPosts() {
 
       postCard.innerHTML = `      
       
-      <div class="imgDiv"><a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="imgHero" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></a></div>
-        <div class="divText"><span class="date">${formattedDate}</span><h5>${post.title.rendered}</h5></div>
+      <a href="html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><div class="imgDiv"><img class="imgHero" alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}"></div>
+        <div class="divText"><span class="date">${formattedDate}</span><h5>${post.title.rendered}</h5></div></a>
                     
       `;
       carouselContainer.appendChild(postCard);

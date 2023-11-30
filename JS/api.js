@@ -7,9 +7,11 @@ import {
 
 document.addEventListener("DOMContentLoaded", function () {
   const textElement = document.getElementById("animatedText");
-  const textContent = "Welcome to my blog!";
 
-  animateText(textElement, textContent);
+  if (textElement) {
+    const textContent = "Welcome to my blog!";
+    animateText(textElement, textContent);
+  }
 });
 
 const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";

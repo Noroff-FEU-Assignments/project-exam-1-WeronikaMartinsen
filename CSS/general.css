@@ -167,7 +167,7 @@ form {
 }
 .btnCTA {
   background-color: var(--pink);
-  color: white;
+  color: black;
   font-size: 1em;
   padding: 0.8em 2.6em;
   font-family: "Roboto", sans-serif;

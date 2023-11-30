@@ -57,8 +57,9 @@
 .heroText {
   max-width: 60em;
   width: 100%;
-  margin: 0 1em 2em 1em;
+  margin: 0 1em 0 1em;
   text-align: center;
+  font-size: 1.3em;
 }
 .slide-arrow {
   cursor: pointer;
@@ -112,8 +113,7 @@
   gap: 1em;
   width: 100%;
   margin: 1em;
-  padding: 1em 1em 4em 1em;
-  width: 90%;
+  padding: 1em 1em 1em 1em;
 }
 .hero-box {
   display: flex;

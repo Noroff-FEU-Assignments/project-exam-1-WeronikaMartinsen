@@ -80,7 +80,7 @@
   max-width: 400px;
 }
 .hero-image img {
-  width: 80%;
+  width: 60%;
 }
 .hero-image img:hover {
   scale: 1.01;
@@ -91,4 +91,5 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2em;
+  padding: 1em;
 }

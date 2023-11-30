@@ -8,9 +8,7 @@
   .secondBox {
     padding: 0.3em;
   }
-  .hero-image img {
-    max-width: 40%;
-  }
+
   .posts {
     width: 80%;
   }
@@ -20,15 +18,29 @@
   .heroText {
     gap: 0;
   }
+  .navList ul {
+    gap: 1.6em;
+    font-size: 0.9em;
+  }
+  .hero-section {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .hero-image {
+    width: 90%;
+  }
+  .hero-image img {
+    width: 15em;
+  }
+  .hero-box {
+    width: 90%;
+  }
 }
 @media (max-width: 785px) {
   .logoImg {
     width: 12em;
   }
-  .navList ul {
-    gap: 1.6em;
-    font-size: 0.9em;
-  }
+
   .postImg {
     width: 100%;
   }
@@ -39,11 +51,6 @@
   .posts {
     width: 90%;
   }
-  .hero-section {
-    flex-direction: column-reverse;
-    gap: 0;
-  }
-
   .hero-box {
     max-width: 600px;
   }
@@ -87,9 +94,7 @@
   .carousel-card {
     width: 100%;
   }
-  .heroText {
-    font-size: 0.9em;
-  }
+
   #validationLeftDiv {
     font-size: 90%;
     flex-direction: column;

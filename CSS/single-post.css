@@ -22,8 +22,13 @@
   border-radius: var(--border-radius);
   background-color: white;
   margin-top: 1em;
-  box-shadow: var(--box-shadow);
+
   margin-bottom: 2em;
+}
+.postHomePage:hover,
+.postHomePage:active {
+  transform: scale(1.01);
+  box-shadow: var(--box-shadow);
 }
 
 .postHomePage.show {

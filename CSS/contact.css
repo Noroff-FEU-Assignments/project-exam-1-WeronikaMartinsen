@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 11em;
+  margin-top: 2em;
   margin-bottom: 3em;
 }
 .validationContainer div {
@@ -66,8 +66,18 @@
 }
 .contactInput {
   width: 100%;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--lighter-gray);
   border-radius: 10px;
+}
+.contactInput:focus {
+  outline: none;
+  border: 1px solid var(--lighter-gray);
+  box-shadow: none;
+}
+.contactInput:hover,
+.contactInput:active {
+  border: 1px solid var(--gray);
+  background-color: var(--lighter-gray);
 }
 .form-group span {
   color: red;
@@ -87,6 +97,7 @@
   color: white;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
 }
 .overlayMessage {
   display: flex;
@@ -123,4 +134,15 @@
 }
 #height {
   max-width: 10em;
+}
+.hero-contact img {
+  width: 10em;
+  margin: 0;
+  padding: 0;
+}
+.hero-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9em;
 }

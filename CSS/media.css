@@ -26,7 +26,8 @@
     width: 12em;
   }
   .navList ul {
-    gap: 1.4em;
+    gap: 1.6em;
+    font-size: 0.9em;
   }
   .postImg {
     width: 100%;
@@ -141,9 +142,9 @@
     font-size: 1.1em;
     gap: 3em;
   }
-  .navList ul li a:hover,
-  .navList ul li a:active {
-    text-decoration: 4px underline var(--pink);
+  .navList ul li a {
+    color: black;
+    font-size: 1.2em;
   }
 
   form {

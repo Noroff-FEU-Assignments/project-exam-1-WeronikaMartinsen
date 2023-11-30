@@ -30,10 +30,10 @@ body {
 }
 
 :root {
-  --pink: #f2637e;
-  --light-pink: #f2889b;
-  --lighter-pink: #f2acb9;
-  --gray: rgb(83, 83, 83);
+  --pink: #e07b00;
+  --light-pink: #63706b;
+  --lighter-pink: #40534d;
+  --gray: rgb(0, 0, 0);
   --lighter-gray: #f2f2f2;
   --border-radius: 10px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -87,7 +87,6 @@ button {
   border: none;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.2em;
   font-size: 0.9em;
 }
 
@@ -102,8 +101,7 @@ button {
 .button-main:hover,
 .button-main:active {
   box-shadow: var(--box-shadow);
-  background-color: var(--lighter-gray);
-  color: var(--gray);
+  background-color: var(--light-pink);
 }
 
 .sizeBtn {
@@ -114,6 +112,7 @@ input {
   border-style: none;
   height: 3em;
   font-family: "Roboto", sans-serif;
+  background-color: var(--lighter-gray);
 }
 .loading {
   margin-top: 3em;
@@ -199,6 +198,8 @@ form {
 
 .hero-image img {
   width: 25em;
+}
+.blob {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
 }
 .colorWhite {

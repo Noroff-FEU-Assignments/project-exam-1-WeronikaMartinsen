@@ -40,7 +40,7 @@ async function displayPost() {
     singlePostContainer.innerHTML = "";
     singlePostContainer.innerHTML = `<div class="postHomePage" id="postHomePageSection">
     <div class="firstBox">
-    <h3 class="titleDecoration marginBottom">${post.title.rendered}</h3>
+    <h3 class="marginBottom">${post.title.rendered}</h3>
     <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
     <div class="secondBox">
     <span>${post.excerpt.rendered}</span>
@@ -79,7 +79,7 @@ async function displayPost2() {
     singlePostContainer2.innerHTML = "";
     singlePostContainer2.innerHTML = `<div class="postHomePage postHomePage2" id="postHomePageSection">
       <div class="firstBox">
-        <h3 class="titleDecoration marginBottom">${post.title.rendered}</h3>
+        <h3 class="marginBottom">${post.title.rendered}</h3>
         <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}">
           <img class="postImage" src="${post.jetpack_featured_media_url}">
         </a>

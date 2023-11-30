@@ -8,7 +8,7 @@ import {
 import { getPosts } from "./api.js";
 
 let posts = [];
-let filteredPosts = [];
+let displayedPostIds = [];
 
 document.addEventListener("DOMContentLoaded", function () {
   const textElement = document.getElementById("animateTextBlog");
@@ -24,8 +24,9 @@ export async function filterPostsByCategory(categoryId) {
     posts = await getPosts();
     const postContainer = document.querySelector(".posts");
     postContainer.innerHTML = "";
+    displayedPostIds = [];
 
-    filteredPosts = posts.filter(
+    const filteredPosts = posts.filter(
       (post) =>
         Array.isArray(post.categories) && post.categories.includes(categoryId)
     );
@@ -67,11 +68,20 @@ let currentPage = 1;
 function displayPosts(postsToDisplay) {
   const postContainer = document.querySelector(".posts");
   postsToDisplay.forEach((post) => {
-    createCard(post, postContainer);
+    if (!displayedPostIds.includes(post.id)) {
+      createCard(post, postContainer);
+      displayedPostIds.push(post.id);
+      console.log("Displayed Post IDs:", displayedPostIds);
+    }
   });
 }
 
 function createCard(post, container) {
+  if (displayedPostIds.includes(post.id)) {
+    // Skip if the post has already been displayed
+    return;
+  }
+
   let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
     "en-US",
     {
@@ -84,7 +94,7 @@ function createCard(post, container) {
   const postBlog = document.createElement("div");
   postBlog.className = "post";
   postBlog.innerHTML = `      
-    <h2 class="titleDecoration">${post.title.rendered}</h2>
+    <h2>${post.title.rendered}</h2>
     <span class="date">${formattedDate}</span>
     <div class="postBlogImage"><a class="postImg" href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
     <span>${post.excerpt.rendered}</span>
@@ -127,9 +137,18 @@ window.onload = function () {
     const startRange = (pageIndex - 1) * cardIncrease;
     const endRange = pageIndex * cardIncrease;
 
-    cardCountPost.innerHTML = endRange;
+    // Track the number of displayed posts
+    const displayedPostCount = displayedPostIds.length;
 
-    const newPosts = posts.slice(startRange, endRange);
+    const newPosts = posts.slice(
+      displayedPostCount,
+      displayedPostCount + cardIncrease
+    );
+
+    // Update the card count
+    cardCountPost.innerHTML = displayedPostCount + cardIncrease;
+
+    // Display the new posts
     displayPosts(newPosts);
   }
 

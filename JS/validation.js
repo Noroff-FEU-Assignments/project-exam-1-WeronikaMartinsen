@@ -35,7 +35,7 @@ validation.innerHTML = `
       <textarea class="contactInput messageInput" id="message" name="message" rows="5" required></textarea>
       <span id="message-error"></span></div>
     <div class="form-group btn">
-      <button type="submit" class="buttonSubmit">Send Message</button>
+      <button type="submit" class="buttonSubmit btnCTA">Send Message</button>
       <span id="submit-error"></span></div>
 
   </form> 

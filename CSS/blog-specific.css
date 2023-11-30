@@ -23,7 +23,7 @@
 }
 .postImg {
   margin-top: 1em;
-  width: 30em;
+  max-width: 20em;
   cursor: pointer;
 }
 .postImg:hover {

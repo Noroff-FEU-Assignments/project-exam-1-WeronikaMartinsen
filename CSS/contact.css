@@ -89,16 +89,7 @@
   color: seagreen;
   font-size: 1.5em;
 }
-.buttonSubmit {
-  margin-top: 2em;
-  padding: 1.3em;
-  border: none;
-  background-color: var(--gray);
-  color: white;
-  border-radius: 10px;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-}
+
 .overlayMessage {
   display: flex;
   flex-direction: column;

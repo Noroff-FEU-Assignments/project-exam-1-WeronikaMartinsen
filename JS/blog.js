@@ -61,7 +61,7 @@ export async function fetchAndDisplayPosts() {
 }
 
 const cardLimit = 10;
-const cardIncrease = 3;
+const cardIncrease = 4;
 let pageCount;
 let currentPage = 1;
 
@@ -93,14 +93,18 @@ function createCard(post, container) {
 
   const postBlog = document.createElement("div");
   postBlog.className = "post";
-  postBlog.innerHTML = `      
+  postBlog.innerHTML = `
+  <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}">
     <h2>${post.title.rendered}</h2>
     <span class="date">${formattedDate}</span>
-    <div class="postBlogImage"><a class="postImg" href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}"><img class="postImage" src="${post.jetpack_featured_media_url}"></a></div>
+    <div class="postBlogImage">
+      <img class="postImage" src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}">
+    </div>
     <span>${post.excerpt.rendered}</span>
     <span class="excerpt">${post.content.rendered}</span>
     <a class="readMore">Read more...</a>
-  `;
+  </a>
+`;
 
   container.appendChild(postBlog);
 

@@ -1,3 +1,4 @@
+// Import necessary functions from functions.js
 import {
   showError,
   showLoadingIndicator,
@@ -6,9 +7,12 @@ import {
 
 import { getPosts } from "./api.js";
 
+// Array to store all fetched posts
 let posts = [];
+// Array to store IDs of displayed posts
 let displayedPostIds = [];
 
+// Function to filter posts by a specific category
 export async function filterPostsByCategory(categoryId) {
   showLoadingIndicator();
   try {
@@ -17,6 +21,7 @@ export async function filterPostsByCategory(categoryId) {
     postContainer.innerHTML = "";
     displayedPostIds = [];
 
+    // Filter posts based on the specified category
     const filteredPosts = posts.filter(
       (post) =>
         Array.isArray(post.categories) && post.categories.includes(categoryId)
@@ -26,6 +31,8 @@ export async function filterPostsByCategory(categoryId) {
     displayPosts(filteredPosts.slice(0, cardLimit));
 
     hideLoadingIndicator();
+
+    // Hide "Load More" button and post count display
     const loadMoreButton = document.getElementById("load-more");
     loadMoreButton.style.display = "none";
 
@@ -36,6 +43,7 @@ export async function filterPostsByCategory(categoryId) {
   }
 }
 
+// Function to fetch and display all posts
 export async function fetchAndDisplayPosts() {
   showLoadingIndicator();
   try {
@@ -56,6 +64,7 @@ const cardIncrease = 4;
 let pageCount;
 let currentPage = 1;
 
+// Function to display posts in the UI
 function displayPosts(postsToDisplay) {
   const postContainer = document.querySelector(".posts");
   postsToDisplay.forEach((post) => {
@@ -66,6 +75,7 @@ function displayPosts(postsToDisplay) {
   });
 }
 
+// Function to create a card for a single post
 function createCard(post, container) {
   if (displayedPostIds.includes(post.id)) {
     // Skip if the post has already been displayed
@@ -111,10 +121,12 @@ function createCard(post, container) {
     }
   });
 }
-
+// Event listener when the window loads
 window.onload = function () {
+  // Fetch and display posts on window load
   fetchAndDisplayPosts();
 
+  // Load more button event listener
   const loadMoreButton = document.getElementById("load-more");
   const cardCountPost = document.getElementById("card-count");
 

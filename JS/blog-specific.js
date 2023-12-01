@@ -1,20 +1,24 @@
+// Import necessary functions from functions.js
 import {
   showError,
   showLoadingIndicator,
   hideLoadingIndicator,
 } from "./functions.js";
 
+// Function to extract post ID from the query parameter in the URL
 function getPostIdFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
   return id;
 }
 
+// Function to extract post title from the query parameter in the URL
 function getPostTitleFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get("title");
 }
 
+// Function to fetch a single post using the post ID
 async function fetchPosts() {
   showLoadingIndicator();
   const postId = getPostIdFromQuery();
@@ -40,6 +44,7 @@ async function fetchPosts() {
   }
 }
 
+// Function to create HTML content for a single post
 function createHtml(post) {
   let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
     "en-US",
@@ -61,23 +66,26 @@ function createHtml(post) {
     <div class="modalContent"><img src="" alt="${post.better_featured_image.alt_text}"class="modalImg"/>
     <span class="modalTxt"></span></div></div>
     <span class="widthH1">${post.content.rendered}</span>
-    <div class="linkToBlog">
+    <div class="linkToBlog margin-top">
           <a href="blog.html">Back to blog &rarr;</a
           >
         </div>
   `;
-
+  // Get all images in the post
   const images = document.querySelectorAll(".postImg");
+  // Get modal and its components
   const modal = document.querySelector(".modal");
   const modalImg = document.querySelector(".modalImg");
   const modalTxt = document.querySelector(".modalTxt");
 
+  // Add click event listener to close the modal
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("close")) {
       modal.classList.remove("appear");
     }
   });
 
+  // Add click event listeners to images for modal display
   images.forEach((image) => {
     image.addEventListener("click", () => {
       modalImg.src = image.src;

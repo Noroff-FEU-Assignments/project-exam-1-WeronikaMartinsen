@@ -1,12 +1,14 @@
 import { animateText } from "./functions.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Animate the text element on page load
   const textElement = document.getElementById("animateTextContact");
   const textContent = "Contact me";
 
   animateText(textElement, textContent);
 });
 
+// Select the element for displaying validation messages
 const validation = document.querySelector(".validation");
 
 validation.innerHTML = `
@@ -47,12 +49,14 @@ validation.innerHTML = `
 <div class="contactBox"><ion-icon class="contactIcon" name="logo-instagram"></ion-icon><span class="infoText">Instagram</span></div>
 </div>`;
 
+// Select elements for displaying validation errors
 const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
 const subjectError = document.getElementById("subject-error");
 const messageError = document.getElementById("message-error");
 const submitError = document.getElementById("submit-error");
 
+// Function to validate the name field
 function validateName() {
   const name = document.getElementById("name").value;
   const required = 5;
@@ -74,6 +78,7 @@ function validateName() {
   return true;
 }
 
+// Function to validate the email field
 function validateEmail() {
   const email = document.getElementById("email").value;
 
@@ -89,6 +94,7 @@ function validateEmail() {
   return true;
 }
 
+// Function to validate the message field
 function validateMessage() {
   const message = document.getElementById("message").value;
   const required = 25;
@@ -102,6 +108,7 @@ function validateMessage() {
   return true;
 }
 
+// Function to validate the subject field
 function validateSubject() {
   const subject = document.getElementById("subject").value;
   const required = 15;
@@ -115,6 +122,7 @@ function validateSubject() {
   return true;
 }
 
+// Function to validate the entire form
 function validateForm() {
   if (
     !validateName() ||
@@ -132,11 +140,13 @@ function validateForm() {
   }
 }
 
+// Add keyup event listeners for live validation
 document.getElementById("name").addEventListener("keyup", validateName);
 document.getElementById("email").addEventListener("keyup", validateEmail);
 document.getElementById("subject").addEventListener("keyup", validateSubject);
 document.getElementById("message").addEventListener("keyup", validateMessage);
 
+// Add click event listener for form submission
 const submitButton = document.querySelector(".buttonSubmit");
 
 submitButton.addEventListener("click", function (event) {

@@ -6,9 +6,11 @@ import {
 
 import { filterPostsByCategory } from "./blog.js";
 
+// API endpoint to fetch categories
 const categoriesLink =
   "https://www.rainy-days.no/wp-json/wp/v2/categories/?per_page=30";
 
+// Function to fetch categories from the API
 async function getCategories() {
   showLoadingIndicator();
   try {

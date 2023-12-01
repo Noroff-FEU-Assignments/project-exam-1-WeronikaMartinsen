@@ -1,3 +1,4 @@
+// Import necessary functions from functions.js
 import {
   showError,
   showLoadingIndicator,
@@ -5,17 +6,22 @@ import {
   animateText,
 } from "./functions.js";
 
+// Execute code after DOM content has loaded
 document.addEventListener("DOMContentLoaded", function () {
+  // Get the text element for animation
   const textElement = document.getElementById("animatedText");
 
+  // Check if the text element exists
   if (textElement) {
     const textContent = "Welcome to my blog!";
     animateText(textElement, textContent);
   }
 });
 
+// API URL for fetching posts
 const url = "https://www.rainy-days.no/wp-json/wp/v2/posts/?per_page=30";
 
+// Function to fetch posts from the API
 export async function getPosts() {
   showLoadingIndicator();
   try {
@@ -31,13 +37,16 @@ export async function getPosts() {
     throw error;
   }
 }
+// Function to display posts in a carousel
 export async function displayPosts() {
   try {
     const posts = await getPosts();
     const carouselContainer = document.querySelector(".carousel");
     carouselContainer.innerHTML = "";
 
+    // Iterate through each post and create a carousel card
     posts.forEach((post) => {
+      // Format the date of the post
       let formattedDate = new Date(Date.parse(post.date)).toLocaleDateString(
         "en-US",
         {
@@ -70,12 +79,14 @@ export async function displayPosts() {
     } else {
       numVisiblePosts = 3;
     }
-
+    // Initialize the current slide index
     let currentSlide = 0;
 
+    // Variables for touch events
     let touchStartX = 0;
     let touchEndX = 0;
 
+    // Add touch event listeners for swipe functionality
     carousel.addEventListener("touchstart", (e) => {
       touchStartX = e.touches[0].clientX;
     });
@@ -85,6 +96,7 @@ export async function displayPosts() {
       handleSwipe();
     });
 
+    // Handle swipe events
     function handleSwipe() {
       const minSwipeDistance = 50;
       const swipeDistance = touchEndX - touchStartX;
@@ -95,7 +107,7 @@ export async function displayPosts() {
         moveCarousel(1);
       }
     }
-
+    // Add click event listeners for next and previous buttons
     nextButton.addEventListener("click", () => {
       if (currentSlide < Math.ceil(posts.length / numVisiblePosts) - 1) {
         moveCarousel(1);
@@ -112,6 +124,7 @@ export async function displayPosts() {
       updateCarouselView();
     });
 
+    // Toggle visibility of arrow buttons based on current slide
     function toggleArrowButtons() {
       const arrow = document.getElementById("arrow");
 

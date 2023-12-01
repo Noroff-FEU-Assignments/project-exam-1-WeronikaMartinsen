@@ -6,15 +6,18 @@ import {
 } from "./functions.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Animation for the text element
   const textElement = document.getElementById("animatedTextSingle");
   const textContent = "Parenthood posts";
 
   animateText(textElement, textContent);
 });
 
+// URLs for fetching single posts
 const singlePostUrl = "https://www.rainy-days.no/?rest_route=/wp/v2/posts/82";
 const singlePostUrl2 = "https://www.rainy-days.no/?rest_route=/wp/v2/posts/68";
 
+// Function to fetch a single post
 export async function getPost() {
   showLoadingIndicator();
   try {
@@ -31,6 +34,8 @@ export async function getPost() {
     throw error;
   }
 }
+
+// Function to display a single post
 export async function displayPost() {
   showLoadingIndicator();
   try {
@@ -69,12 +74,14 @@ async function getPost2() {
   }
 }
 
+// Function to fetch the second post
 async function displayPost2() {
   showLoadingIndicator();
   try {
     const post = await getPost2();
     const singlePostContainer2 = document.querySelector(".singlePost2");
 
+    // Displaying the second post
     singlePostContainer2.innerHTML = "";
     singlePostContainer2.innerHTML = `<div class="postHomePage postHomePage2" id="postHomePageSection">
       <div class="firstBox">
@@ -99,6 +106,6 @@ async function displayPost2() {
     showError("Failed to fetch the second post. Please try again later.");
   }
 }
-
+// Display the first post and the second post
 displayPost();
 displayPost2();

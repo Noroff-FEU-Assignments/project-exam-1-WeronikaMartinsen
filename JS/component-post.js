@@ -16,7 +16,7 @@ export async function displayLatestPosts() {
       ".new-component-container"
     );
 
-    hideLoadingIndicator(); // Move this here to ensure it's called regardless of the response
+    hideLoadingIndicator(); 
 
     if (posts && posts.length > 0) {
       posts.slice(0, 3).forEach((post) => {

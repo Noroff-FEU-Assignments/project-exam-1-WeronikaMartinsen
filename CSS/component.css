@@ -1,0 +1,43 @@
+.new-component-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  gap: 3em;
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+  background-color: var(--lighter-pink);
+  padding: 4em;
+}
+.post-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5em;
+  gap: 1em;
+  border-radius: var(--border-radius);
+  background-color: white;
+  width: 15em;
+  height: 20em;
+}
+.componentImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.componentImage {
+  margin-top: 1em;
+  width: 100%;
+  height: 10em;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.componentImage img {
+  width: 100%;
+}
+.alignDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lighter-pink);
+}

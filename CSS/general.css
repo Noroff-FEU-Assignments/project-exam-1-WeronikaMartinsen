@@ -76,7 +76,6 @@ a {
   border-radius: var(--border-radius);
   color: var(--gray);
   font-family: "Roboto", sans-serif;
-  letter-spacing: 1px;
 }
 
 img {
@@ -182,7 +181,6 @@ form {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  margin-top: 2em;
   font-style: italic;
 }
 .h2-hero {
@@ -200,9 +198,7 @@ form {
 .blob {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
 }
-.colorWhite {
-  color: var(--gray);
-}
+
 .textAlign {
   text-align: center;
   padding-bottom: 0.4em;
@@ -235,4 +231,10 @@ form {
 }
 .colorWhite {
   color: white;
+}
+.h4-style {
+  font-size: 1em;
+}
+.marginTopNone {
+  margin-top: 0;
 }

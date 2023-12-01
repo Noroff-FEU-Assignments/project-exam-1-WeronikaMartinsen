@@ -59,7 +59,8 @@
 }
 
 .extraMargin {
-  margin-top: 6em;
+  margin-top: 5em;
+  margin-bottom: 0.2em;
 }
 .headingContainer {
   text-align: center;

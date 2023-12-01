@@ -44,7 +44,7 @@ function createCard(post, container) {
 
   postCard.innerHTML = `
   <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}">
-    <h3 class="date">${formattedDate}</h3>
+    <h2 class="date">${formattedDate}</h2>
     <div class="componentImage">
       <img alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}">
     </div>

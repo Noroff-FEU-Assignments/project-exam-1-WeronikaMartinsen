@@ -221,7 +221,7 @@ form {
 .post-card:active,
 .carousel-card:hover,
 .carousel-card:active {
-  transform: scale(1.01);
+  transform: scale(1.02);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .styleH2 {
@@ -229,4 +229,7 @@ form {
   margin-bottom: 0;
   margin-top: 1em;
   border-bottom: 2px solid var(--lighter-gray);
+}
+.noMargin {
+  margin-bottom: 1.3em;
 }

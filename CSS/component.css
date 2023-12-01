@@ -1,11 +1,11 @@
 .new-component-container {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next row */
-  gap: 3em;
+  gap: 2em;
   justify-content: center;
   align-items: center; /* Center items horizontally */
   background-color: var(--lighter-pink);
-  padding: 4em;
+  padding: 1em 1em 2em 1em;
 }
 .post-card {
   display: flex;
@@ -14,16 +14,15 @@
   flex-direction: column;
   padding: 0.5em;
   gap: 1em;
+  border: 1px solid var(--lighter-pink);
   border-radius: var(--border-radius);
-  background-color: white;
+  background-color: var(--light-pink);
   width: 15em;
   height: 20em;
 }
-.componentImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.post-card:hover,
+.post-card:active {
+  background-color: white;
 }
 
 .componentImage {
@@ -39,5 +38,6 @@
 .alignDiv {
   display: flex;
   flex-direction: column;
+  gap: 1em;
   background-color: var(--lighter-pink);
 }

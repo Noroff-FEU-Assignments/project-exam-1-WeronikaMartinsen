@@ -143,3 +143,6 @@
   font-style: italic;
   letter-spacing: 1px;
 }
+.hero-image img {
+  width: 80%;
+}

@@ -12,7 +12,6 @@ export async function displayLatestPosts() {
 
   try {
     const posts = await getPosts(url);
-    console.log(posts);
     const componentContainer = document.querySelector(
       ".new-component-container"
     );

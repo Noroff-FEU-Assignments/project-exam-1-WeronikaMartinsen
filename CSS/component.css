@@ -4,6 +4,7 @@
   gap: 2em;
   justify-content: center;
   align-items: center; /* Center items horizontally */
+  text-align: center;
   background-color: var(--lighter-pink);
   padding: 1em 1em 2em 1em;
 }
@@ -40,4 +41,5 @@
   flex-direction: column;
   gap: 1em;
   background-color: var(--lighter-pink);
+  color: white;
 }

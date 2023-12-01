@@ -39,7 +39,8 @@ body {
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 p,
-li {
+li,
+span {
   margin: 0;
   padding: 0;
   max-width: 800px;
@@ -75,6 +76,7 @@ a {
   border-radius: var(--border-radius);
   color: var(--gray);
   font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
 }
 
 img {
@@ -170,6 +172,7 @@ form {
   font-size: 1em;
   padding: 0.8em 2.6em;
   font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
 }
 .linkToBlog {
   display: flex;
@@ -202,5 +205,5 @@ form {
   padding-bottom: 0.4em;
 }
 .extraMarginTop {
-  margin-top: 2em;
+  margin-top: 2.7em;
 }

@@ -126,7 +126,7 @@
 }
 
 .noMargin {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.3em;
 }
 .marginBottom {
   width: 100%;
@@ -157,4 +157,10 @@
 .dotCarousel.active-dot {
   background-color: var(--gray);
   box-shadow: var(--box-shadow);
+}
+.extraStyle {
+  color: var(--lighter-pink);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1px;
 }

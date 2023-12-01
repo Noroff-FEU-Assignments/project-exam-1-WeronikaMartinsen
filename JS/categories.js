@@ -6,7 +6,8 @@ import {
 
 import { filterPostsByCategory } from "./blog.js";
 
-const categoriesLink = "https://www.rainy-days.no/wp-json/wp/v2/categories";
+const categoriesLink =
+  "https://www.rainy-days.no/wp-json/wp/v2/categories/?per_page=30";
 
 async function getCategories() {
   showLoadingIndicator();

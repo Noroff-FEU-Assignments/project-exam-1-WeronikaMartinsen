@@ -10,14 +10,11 @@
 }
 
 .carousel {
-  margin: 1em;
   gap: 0.9em;
   display: flex;
-  height: 27em;
   transition: transform 0.3s ease-in-out;
   overflow-x: auto;
   align-items: center;
-  margin: 1em;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
@@ -26,7 +23,6 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 10px;
-  border: 1px solid white;
   border-radius: 5px;
   height: 20em;
   min-width: 15em;
@@ -48,6 +44,7 @@
   width: 100%;
   margin: 0 1em 0 1em;
   text-align: center;
+  line-height: 1.5;
 }
 .slide-arrow {
   cursor: pointer;
@@ -66,6 +63,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2em 0 2em 0;
 }
 #arrow {
   color: var(--gray);
@@ -142,6 +140,9 @@
   font-weight: 600;
   font-style: italic;
   letter-spacing: 1px;
+  font-size: 1.3em;
+  padding-top: 0.6em;
+  text-align: center;
 }
 .hero-image img {
   width: 80%;

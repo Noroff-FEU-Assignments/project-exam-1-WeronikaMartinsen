@@ -26,6 +26,7 @@
     flex-direction: column-reverse;
     gap: 0;
     margin: 0;
+    margin-bottom: 2em;
   }
   .hero-image {
     width: 90%;
@@ -69,9 +70,6 @@
   .modalContent {
     margin-top: 6em;
   }
-  #arrow {
-    font-size: 2em;
-  }
   .contactInfo {
     flex-wrap: wrap;
   }
@@ -100,9 +98,6 @@
   }
   #animatedText {
     font-size: 1.5em;
-  }
-  .carousel-card {
-    width: 100%;
   }
 
   #validationLeftDiv {

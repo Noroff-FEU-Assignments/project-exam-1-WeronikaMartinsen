@@ -51,11 +51,6 @@
   display: none;
   transition: opacity 0.3s ease;
 }
-.btn-nav {
-  font-weight: 600;
-  padding: 0.4em;
-  border: 2px solid var(--pink);
-}
 
 .btn-nav:hover,
 .btn-nav:active {

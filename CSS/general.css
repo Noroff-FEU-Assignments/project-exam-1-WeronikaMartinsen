@@ -53,12 +53,12 @@ ul {
 
 h1,
 h2 {
-  font-weight: 500;
   padding: 0;
   margin: 1em;
   text-align: center;
   color: var(--gray);
-  font-family: "Playfair Display", serif;
+  font-family: "Lora", serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 h1 {
@@ -207,7 +207,6 @@ form {
   color: white;
   margin-bottom: 0;
   margin-top: 1em;
-  border-bottom: 2px solid var(--lighter-gray);
 }
 .noMargin {
   margin-bottom: 1.3em;

@@ -47,7 +47,6 @@
   text-align: center;
   padding: 2em;
   margin-top: 3em;
-  border-top: 2px solid var(--lighter-gray);
 }
 .secondBox {
   flex-direction: column;

@@ -16,7 +16,7 @@ export async function displayLatestPosts() {
       ".new-component-container"
     );
 
-    hideLoadingIndicator(); 
+    hideLoadingIndicator();
 
     if (posts && posts.length > 0) {
       posts.slice(0, 3).forEach((post) => {
@@ -49,7 +49,7 @@ function createCard(post, container) {
       <img alt="${post.better_featured_image_alt_text}" src="${post.jetpack_featured_media_url}">
     </div>
     <div>
-      <h5>${post.title.rendered}</h5>
+      <h5 class="extraStyle">${post.title.rendered}</h5>
     </div>
   </a>
 `;

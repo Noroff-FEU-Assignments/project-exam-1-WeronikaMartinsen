@@ -23,6 +23,9 @@ async function fetchPosts() {
   showLoadingIndicator();
   const postId = getPostIdFromQuery();
   const title = getPostTitleFromQuery();
+
+  const decodedTitle = decodeURIComponent(title.trim());
+
   if (!postId) {
     throw new Error(`API loading failed. ID not found in the query parameter.`);
   }
@@ -37,7 +40,10 @@ async function fetchPosts() {
       throw new Error("Fetch jacket with ID failed.");
     }
     const titleContainer = document.getElementById("title");
-    titleContainer.textContent = title;
+
+    titleContainer.textContent = decodedTitle;
+    titleContainer.innerHTML = decodedTitle;
+
     createHtml(singlePost);
   } catch (error) {
     showError("Failed to fetch posts. Please try again later.");

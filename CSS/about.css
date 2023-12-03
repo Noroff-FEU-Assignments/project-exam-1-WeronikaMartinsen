@@ -6,12 +6,10 @@
   padding: 0;
   flex-wrap: wrap;
 }
-
 .about-ul {
   padding: 0;
   max-width: 450px;
 }
-
 .hero-about ul li {
   margin-bottom: 1em;
   font-size: 1em;
@@ -34,7 +32,6 @@
 .imgBox:hover {
   transform: scale(1.02);
 }
-
 .imgBox img {
   width: 100%;
   height: auto;

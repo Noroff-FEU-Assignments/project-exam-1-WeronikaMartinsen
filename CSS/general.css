@@ -86,13 +86,6 @@ button {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
 }
-
-.button-main {
-  padding: 1em 4em;
-  background-color: var(--pink);
-  color: white;
-  margin-left: auto;
-}
 .btnCTA {
   background-color: var(--pink);
   color: black;
@@ -103,14 +96,11 @@ button {
   font-weight: 500;
 }
 .btnCTA:hover,
-.btnCTA:active,
-.button-main:hover,
-.button-main:active {
+.btnCTA:active {
   box-shadow: var(--box-shadow);
   background-color: var(--light-pink);
   color: white;
 }
-
 .sizeBtn {
   color: black;
 }
@@ -124,7 +114,6 @@ input {
   margin-top: 3em;
   text-align: center;
 }
-
 .dot {
   display: inline-block;
   width: 10px;
@@ -172,7 +161,6 @@ a.more-link {
 form {
   resize: none;
 }
-
 .linkToBlog {
   display: flex;
   justify-content: center;
@@ -191,11 +179,9 @@ form {
 .font-size {
   font-size: 1.4em;
 }
-
 .blob {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
 }
-
 .textAlign {
   text-align: center;
   padding-bottom: 0.4em;

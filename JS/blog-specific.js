@@ -12,19 +12,21 @@ function getPostIdFromQuery() {
   return id;
 }
 
-// Function to extract post title from the query parameter in the URL
+/* // Function to extract post title from the query parameter in the URL
 function getPostTitleFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get("title");
+  const encodedTitle = urlParams.get("title");
+  const decodedTitle = decodeURIComponent(encodedTitle);
+  return decodedTitle;
 }
-
+ */
 // Function to fetch a single post using the post ID
 async function fetchPosts() {
   showLoadingIndicator();
   const postId = getPostIdFromQuery();
-  const title = getPostTitleFromQuery();
-
-  const decodedTitle = decodeURIComponent(title.trim());
+  /* const title = getPostTitleFromQuery(); */
+  /* 
+  const decodedTitle = decodeURIComponent(title.trim()); */
 
   if (!postId) {
     throw new Error(`API loading failed. ID not found in the query parameter.`);
@@ -39,10 +41,10 @@ async function fetchPosts() {
     if (!response.ok) {
       throw new Error("Fetch jacket with ID failed.");
     }
-    const titleContainer = document.getElementById("title");
+    /*    const titleContainer = document.getElementById("title");
 
     titleContainer.textContent = decodedTitle;
-    titleContainer.innerHTML = decodedTitle;
+    titleContainer.innerHTML = decodedTitle; */
 
     createHtml(singlePost);
   } catch (error) {

@@ -1,68 +1,125 @@
-## Project Exam 1
+![Image Alt text](/images/blog.png "Screenshot of Blog Web & Dev Parenthood.")
 
-## Goal
+# :wave: Hello!
 
-To put into practice the skills learned over your first year of studies.
+Welcome to my first project Project Exam!
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Features
 
-### Home Page
+- **HTML and CSS**
+- **JavaScript**
+- **Dynamic Content:** Fetch and display content (posts) dynamically from a headless CMS API.
+- **Live Demo:** Visit the [live demo](https://celebrated-chebakia-e82c27.netlify.app/) to experience the project.
 
-The home page should feature a 'Latest Posts' section, designed as a carousel (slider) for the desktop version. As an example, you could display four posts at a time, although you're welcome to adjust this number to better suit your design. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. For the mobile version, you are free to alter the layout as you deem appropriate, without being tied to a carousel format.
+## Table of Contents
 
-### Blog Page
+- Homepage
+- Blog
+- Contact
+- About
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+# Build with:
 
-### Blog Specific Page
+<p align="left"><a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+  </a> </p>
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+## Installing
 
-If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+To get started with this project, follow these steps:
 
-### Contact page
+1. Clone the repo:
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+   ```bash
+   git clone git@github.com/WeronikaMartinsen/HTML-CSS-CA-Design1-.git
+   ```
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+2. Install the dependencies:
 
-### WordPress
+```bash
+npm install
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+```
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+## :running: Running
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+3. To run the app, use the following command:
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+```bash
+npm run start
 
-## Level 1 Process
+```
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+# :globe_with_meridians: Contributing
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+You are welcome to contribute to this project! Contributions are essential for the growth and improvement of the project. Please take a moment to review the following guidelines before getting started.
 
+## How to Contribute
+
+1. Fork the repository on GitHub.
+2. Clone the forked repository to your local machine.
+
+```bash
+git clone git@github.com/WeronikaMartinsen/HTML-CSS-CA-Design1-.git
+```
+
+3. Create a new branch to work on.
+
+```bash
+git checkout -b feature/your-feature
+```
+
+4. Make your changes and ensure that your code follows the project's styleguides.
+
+5. Test your changes thoroughly.
+
+6. Commit your changes with a descriptive commit message.
+
+```bash
+git commit -m "Add a concise and clear commit message"
+```
+
+7. Push your branch to your forked repository on Github.
+
+```bash
+git commit -m "Add a concise and clear commit message"
+```
+
+8. Open a pull request (PR) on the main repository.
+
+9. Provide a clear and detailed description of your changes in the PR.
+
+## Bug Reports
+
+If you find a bug or encounter an issue, please report it to me!
+
+## Code Contributions
+
+When contributing code, please ensure the following:
+
+Follow the project's coding style and conventions.
+Write clear and concise code with appropriate comments where necessary.
+Test your changes thoroughly before submitting a pull request.
+
+# :mailbox_with_mail: Contact me
+
+Reach out to me for collaboration or just to say hello!
+
+- Email: wb3167@gmail.com
+- Portfolio: [weronikamartinsen.netlify.app](https://weronikamartinsen.netlify.app/)
+- LinkedIn: [Weronika Martinsen](https://www.linkedin.com/in/weronika-martinsen-a655a1246/)
+
+## References
+
+- Images: https://unsplash.com/
+- Icons: https://fontawesome.com/
+- Icons: https://ionic.io/ionicons
+- Fonts: https://fonts.google.com/
+- Hosting: https://www.one.com/en/wordpress-hosting/1-click-wordpress
+- Content for posts: Chat GPT
+- Youtube tutorials
+- Codepen
+
+## Live Project
+
+- Netlify: https://celebrated-chebakia-e82c27.netlify.app/

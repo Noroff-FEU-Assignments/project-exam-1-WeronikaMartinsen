@@ -94,7 +94,7 @@ function createCard(post, container) {
   const postBlog = document.createElement("div");
   postBlog.className = "post";
   postBlog.innerHTML = `
-  <a href="/html/blog-specific.html?id=${post.id}&title=${post.title.rendered}">
+  <a href="/html/blog-specific.html?id=${post.id}">
     <h2>${post.title.rendered}</h2>
     <span class="date">${formattedDate}</span>
     <div class="postBlogImage">

@@ -123,13 +123,18 @@ function validateSubject() {
 }
 
 // Function to validate the entire form
-function validateForm() {
-  if (
-    !validateName() ||
-    !validateEmail() ||
-    !validateSubject() ||
-    !validateMessage()
-  ) {
+async function validateForm() {
+  const [nameValid, emailValid, subjectValid, messageValid] = await Promise.all(
+    [validateName(), validateEmail(), validateSubject(), validateMessage()]
+  );
+
+  // Clear individual error messages
+  nameError.textContent = "";
+  emailError.textContent = "";
+  subjectError.textContent = "";
+  messageError.textContent = "";
+
+  if (!nameValid || !emailValid || !subjectValid || !messageValid) {
     submitError.style.display = "block";
     submitError.innerHTML = "Please fix errors to submit.";
     return false; // Return false when there are validation errors
@@ -140,11 +145,18 @@ function validateForm() {
   }
 }
 
-// Add keyup event listeners for live validation
+// Add keyup and input event listeners for live validation
 document.getElementById("name").addEventListener("keyup", validateName);
+document.getElementById("name").addEventListener("input", validateName);
+
 document.getElementById("email").addEventListener("keyup", validateEmail);
+document.getElementById("email").addEventListener("input", validateEmail);
+
 document.getElementById("subject").addEventListener("keyup", validateSubject);
+document.getElementById("subject").addEventListener("input", validateSubject);
+
 document.getElementById("message").addEventListener("keyup", validateMessage);
+document.getElementById("message").addEventListener("input", validateMessage);
 
 // Add click event listener for form submission
 const submitButton = document.querySelector(".buttonSubmit");

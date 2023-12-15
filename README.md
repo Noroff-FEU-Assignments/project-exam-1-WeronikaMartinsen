@@ -2,7 +2,7 @@
 
 # :wave: Hello!
 
-Welcome to my first project Project Exam!
+Welcome to the Awesome Blog Project! This is a simple blog application that fetched the posts content from headless CMS.
 
 ## Features
 
